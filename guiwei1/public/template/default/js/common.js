@@ -86,9 +86,7 @@ var relatedSwiper = new Swiper('.goods-may-like .swiper-slider', {
 
 
 $('.head_nav li').each(function() {
-  console.log(11111111);
   if ($(this).find('ul').length > 0) {
-    console.log(22222);
     $(this).children('a').append("<b></b>");
     $(this).addClass('has-child');
   }
