@@ -1,0 +1,156 @@
+{include file="common/top" /}
+
+<div id="banner">
+  <div class="bxSlide-outter" style="overflow:hidden;margin-left:auto;margin-right:auto; width:1920px; max-width:100%; max-height:900px"><script type="text/javascript" src="__CDN__/template/default2/js/jquery.bxslider.js?v={$site.version}"></script>
+<link href="__CDN__/template/default2/css/jquery.bxslider.css?v={$site.version}" rel="stylesheet" type="text/css">
+<div class="bxslider_1">
+    <!-- <div><a href="javascript:;"><img src="__CDN__/template/default2/img/e45d492777.png" alt="" width="100%"></a></div>
+    <div><a href="javascript:;"><img src="__CDN__/template/default2/img/049acb13e3.png" alt="" width="100%"></a></div>
+    <div><a href="https://upas889.myueeshop.com/products/wooden-tv-standtv-cabinettv-shelftvs019-62" target="_blank"><img src="__CDN__/template/default2/img/439a1bbd51.png" alt="" width="100%">
+    </a></div> -->
+    {cms:blocklist id="block" name="banner" orderby="weigh" orderway="desc" }   
+    <div><a href="{$block.url}" target="_blank"><img src="{$block.image}" alt="" width="100%"></a></div>
+    {/cms:blocklist}
+
+</div><script type="text/javascript">$(document).ready(function(){$('.bxslider_1').bxSlider({slideWidth:1920, adaptiveHeight:true, mode:'fade', pause:4000,autoHover:true});});</script></div></div>
+
+<div id="products">
+  <div class="products_box">
+      <div class="p_header">
+        <span class="p_title">Products</span>
+        <div class="products_nav">
+            {cms:channellist id="channel" type="son" typeid="44" orderby="weigh" orderway="asc"}
+                <a href="javascript:;" class="pn_item trans cur-{$channel.id} {if $channel.is_active} cur {/if}" cate="{$channel.id}">{$channel.name}</a>
+            {/cms:channellist}
+        </div>
+      </div>
+      <div class="p_main">
+        {cms:channellist id="channel" type="son" typeid="44" orderby="weigh" orderway="asc"}
+        <div class="pro_list hid {if $channel.is_active} show {/if}" id="cate{$channel.id}">
+            {cms:arclist id="prod" channel="channel['id']"  orderby="weigh" orderway="desc" row="20"}
+            <div class="p_item">
+                <div class="img_box">
+                    <a href="{$prod.url}"><img class="loading_img" data-src="{$prod.image}" alt="{$prod.title}"></a>
+                </div>
+                <a class="item_title" href="{$prod.url}">{$prod.title}</a>
+            </div>
+            {/cms:arclist}
+        </div>
+        {/cms:channellist}
+        <div class="clear"></div>
+      </div>
+  </div>
+</div>
+
+<div id="au">
+  <div class="au_banner">
+    {cms:blocklist id="block" name="about" orderby="weigh" orderway="desc" }
+      <img class="loading_img" data-src="{$block.image}" alt="About Us">
+    {/cms:blocklist}
+  </div>
+  <div class="au_main">
+      {cms:blocklist id="block" name="about" orderby="weigh" orderway="desc" }
+          <div class="au_text">
+              <span class="au_title">About Us</span>
+              <span class="au_contents more_line2_hidden">{$block.content}</span>
+              <a class="more" href="{$block.url}">Learn more</a>
+          </div>
+      {/cms:blocklist}
+
+  </div>
+  <div class="au_little_pic">
+      <a href="">
+        {cms:blocklist id="block" name="about" orderby="weigh" orderway="desc" }
+          {notempty name="$block.images"}
+          {volist name="$block.images|explode=',',###" id="image"}
+            <img class="loading_img" data-src="{$image}" alt="About Us">
+          {/volist}
+          {/notempty}
+        {/cms:blocklist}
+      </a>
+
+  </div>
+</div>
+
+<div id="services">
+  <span class="part_title">Products Highlight</span>
+  <div class="services_main">
+    {cms:blocklist id="block" name="hlight" orderby="weigh" orderway="desc" }
+          {notempty name="$block.images"}
+          {volist name="$block.images|explode=',',###" id="image"}
+          <div class="services_item">
+            <a href="">
+                <img class="services_item_img loading_img" data-src="{$image|cdnurl}" alt="{$block.intro[$key]['info']}">
+            </a>
+            <div class="item_text">
+                <a class="item_title" href="">{$block.intro[$key]['info']}</a>
+            </div>
+          </div>
+         {/volist}
+          {/notempty}
+        {/cms:blocklist}
+          </div>
+</div>
+
+<div id="video">
+  {cms:blocklist id="block" name="index-video" orderby="weigh" orderway="desc" }
+      <div class="img_box">
+        <a class="img_a video_btn" href="javascript:;" video-url="{$block.url}" title="{block.title}">
+            <i class="video_icon"></i>
+            <img class="loading_img" data-src="{$block.image}" alt="{block.title}">
+  
+        </a>
+      </div>
+    
+      <div class="video_main">
+          <div class="video_text">
+              <span class="video_title">{$block.title}</span>
+              <span class="video_contents">{$block.content}</span>
+              <a class="more" href="">Learn more</a>
+          </div>
+      </div>
+			{/cms:blocklist}  
+</div>
+
+<div id="news">
+  <span class="news_title">Latest News</span>
+  <div class="news_main">
+      <div class="main_box">
+          {cms:arclist id="new" channel="66"  orderby="weigh" orderway="desc" row="20" addon="content"}}
+                        <div class="main_item">
+                          <div class="item_img">
+                              <a href="{$new.url}">
+                                  <img class="loading_img trans" data-src="{$new.image}" alt="{$new.title}"><span></span>
+                              </a>
+                          </div>
+                          <div class="item_text">
+                              <a class="item_title" href="{$new.url}">{$new.title}</a>
+                              <div class="line"></div>
+                              <span class="item_date">{$new.createtime|date="Y-m-d",###}</span>
+                              <span class="item_contents">Time: {$new.createtime|date="Y-m-d",###} {$new.content}</span>
+                          </div>
+                      </div>
+
+                        {/cms:arclist}
+
+
+
+          
+                      
+                  </div>
+  </div>
+</div>
+
+<div id="footer_banner">
+  {cms:blocklist id="block" name="Learn" orderby="weigh" orderway="desc" }
+    <span>
+      <img class="loading_img" data-src="{$block.image}">
+    </span>
+    <div class="fb_text">
+      <span class="fb_title"></span>
+      <span class="fb_contents"></span>
+      <a class="more" href="">{$block.title}</a>
+    </div>
+  {/cms:blocklist}
+</div>
+{include file="common/foot" /}
