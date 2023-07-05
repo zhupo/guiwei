@@ -14,7 +14,7 @@
     <section class="top_bar"> 
      <div class="layout"> 
       <div class="head_phone">
-       <a href="">Phone:12345678910</a>
+       <a href="">Phone:{$site.tell}</a>
       </div> 
       <div class="head-search"> 
        <form class="" action=""> 
@@ -26,7 +26,8 @@
     </section> 
     <div class="head_layout layout"> 
      <figure class="logo">
-      <a href=""><img src="__CDN__/template/default/images/logo.png" alt=""></a>
+        <a href="">{notempty name="$site.logo"}<img style="width: 150px; height: 42px;" src="{$site.logo}">{/notempty}</a>
+      <!-- <img src="__CDN__/template/default/images/logo.png" alt=""></a> -->
      </figure> 
      <nav class="nav_wrap"> 
       <ul class="head_nav"> 
