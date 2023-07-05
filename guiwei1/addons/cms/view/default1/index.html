@@ -3,18 +3,11 @@
    <!-- banner --> 
    <section class="slider_banner swiper-container"> 
     <div class="swiper-wrapper"> 
-     <div class="swiper-slide">
-      <a href=""><img src="__CDN__/template/default/images/banner01.jpg" alt=""></a>
-     </div> 
-     <div class="swiper-slide">
-      <a href=""><img src="__CDN__/template/default/images/banner01.jpg" alt=""></a>
-     </div> 
-     <div class="swiper-slide">
-      <a href=""><img src="__CDN__/template/default/images/banner01.jpg" alt=""></a>
-     </div> 
-     <div class="swiper-slide">
-      <a href=""><img src="__CDN__/template/default/images/banner01.jpg" alt=""></a>
-     </div> 
+    {cms:blocklist id="block" name="banner" orderby="weigh" orderway="desc" }   
+      <div class="swiper-slide">
+        <a href="{$block.url}"><img src="{$block.image}" alt=""></a>
+      </div> 
+    {/cms:blocklist}
     </div> 
     <div class="slider_swiper_control"> 
      <div class="banner_button_prev"></div> 
@@ -29,11 +22,20 @@
      <section class="layout"> 
       <div class="index_hd wow fadeInUpA" data-wow-delay=".8s" data-wow-duration="1s"> 
        <h2 class="hd_title">product</h2> 
-       <p class="sub_tit">pharmaceutical machineries, packing materials and </p> 
+       <p class="sub_tit">Dietary fiber drink. . . </p> 
       </div> 
       <section class="feature_item_wrap wow fadeInUpA" data-wow-delay="1.3s" data-wow-duration=".8s"> 
        <div class="feature_items"> 
         <ul class="swiper-wrapper"> 
+        {cms:channellist id="channel" type="son" typeid="44" orderby="weigh" orderway="asc"}
+        {cms:arclist id="prod" channel="channel['id']"  orderby="weigh" orderway="desc" row="20"}
+        <li class="feature_item swiper-slide"> 
+          <figure> 
+           <span class="item_img"><img src="{$prod.image}"></span> 
+           <h4 class="pd_tit"> <a href="{$prod.url}">{$prod.title}</a></h4> 
+          </figure> </li>
+          {/cms:arclist}
+        {/cms:channellist}
          <li class="feature_item swiper-slide"> 
           <figure> 
            <span class="item_img"><img src="__CDN__/template/default/images/pd01.jpg"></span> 
