@@ -1,17 +1,14 @@
 <footer class="web_footer"> 
     <ul class="foot_nav wow fadeInUpA" data-wow-delay="1s" data-wow-duration=".8s"> 
-     <li><a href="">home</a></li> 
-     <li><a href="">about us</a></li> 
-     <li><a href="">product</a></li> 
-     <li><a href="">news</a></li> 
-     <li><a href="">faq</a></li> 
-     <li><a href="">contact us</a></li> 
+     {cms:channellist id="nav" type="top" cache="0" condition="1=isnav" row="20" orderby="weigh" orderway="desc"}
+        <li><a href="{$nav.url}">{$nav.name}</a> </li>
+     {/cms:channellist}
     </ul> 
     <div class="foot_bottom layout"> 
      <ul class="foot_contact wow fadeInUpA" data-wow-delay="1.3s" data-wow-duration=".8s"> 
-      <li class="foot_email"><a href="matial:">info@psdfreebies.com</a></li> 
-      <li class="foot_address">Address:No. 18, Huashan Road, Xinbei District Changzhou, Jiangsu, China (Mainland)</li> 
-      <li class="foot_phone"><a href="tel:">Tel:+123 456 7890</a></li> 
+      <li class="foot_email"><a href="matial:">{$site.emaill}</a></li> 
+      <li class="foot_address">Address:West of Yaodu Avenue, Tuojiang Town, Jianghua Yao Autonomous County, Yongzhou City, Hunan Province, P.R,China</li> 
+      <li class="foot_phone"><a href="tel:">Tel:{$site.tell}</a></li> 
      </ul> 
      <ul class="foot_sns wow fadeInUpA" data-wow-delay="1.5s" data-wow-duration=".8s"> 
       <li><a href=""><img src="__CDN__/template/default/images/sns01.png" alt=""></a></li> 
@@ -20,8 +17,9 @@
       <li><a href=""><img src="__CDN__/template/default/images/sns04.png" alt=""></a></li> 
      </ul> 
      <div class="copyright wow fadeInUpA" data-wow-delay="1.7s" data-wow-duration=".8s">
-      Copyright © 2019 
-      <span class="txt_impt">Goodao.cn</span> All Rights Reserved
+      <!-- Copyright © 2019 
+      <span class="txt_impt">Goodao.cn</span> All Rights Reserved -->
+      {$site.beian}
      </div> 
     </div> 
    </footer> 

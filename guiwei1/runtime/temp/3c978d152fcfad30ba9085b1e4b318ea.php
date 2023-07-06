@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:90:"/Users/pan.liu/Documents/privateProject/guiwei/guiwei1/addons/cms/view/default1/index.html";i:1688536810;s:95:"/Users/pan.liu/Documents/privateProject/guiwei/guiwei1/addons/cms/view/default1/common/top.html";i:1688519483;s:96:"/Users/pan.liu/Documents/privateProject/guiwei/guiwei1/addons/cms/view/default1/common/foot.html";i:1688462069;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:90:"/Users/pan.liu/Documents/privateProject/guiwei/guiwei1/addons/cms/view/default1/index.html";i:1688635876;s:95:"/Users/pan.liu/Documents/privateProject/guiwei/guiwei1/addons/cms/view/default1/common/top.html";i:1688612883;s:96:"/Users/pan.liu/Documents/privateProject/guiwei/guiwei1/addons/cms/view/default1/common/foot.html";i:1688637025;}*/ ?>
 <!doctype html>
 <html>
  <head> 
@@ -15,7 +15,7 @@
     <section class="top_bar"> 
      <div class="layout"> 
       <div class="head_phone">
-       <a href="">Phone:12345678910</a>
+       <a href="">Phone:<?php echo $site['tell']; ?></a>
       </div> 
       <div class="head-search"> 
        <form class="" action=""> 
@@ -27,30 +27,31 @@
     </section> 
     <div class="head_layout layout"> 
      <figure class="logo">
-      <a href=""><img src="/template/default/images/logo.png" alt=""></a>
+        <a href=""><?php if(!(empty($site['logo']) || (($site['logo'] instanceof \think\Collection || $site['logo'] instanceof \think\Paginator ) && $site['logo']->isEmpty()))): ?><img style="width: 150px; height: 42px;" src="<?php echo $site['logo']; ?>"><?php endif; ?></a>
+      <!-- <img src="/template/default/images/logo.png" alt=""></a> -->
      </figure> 
      <nav class="nav_wrap"> 
       <ul class="head_nav"> 
-       <?php $__f26hW4vmyB__ = \addons\cms\model\Channel::getChannelList(["id"=>"nav","type"=>"top","cache"=>"0","condition"=>"1=isnav","row"=>"20","orderby"=>"weigh","orderway"=>"desc"]); if(is_array($__f26hW4vmyB__) || $__f26hW4vmyB__ instanceof \think\Collection || $__f26hW4vmyB__ instanceof \think\Paginator): $i = 0; $__LIST__ = $__f26hW4vmyB__;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$nav): $mod = ($i % 2 );++$i;?>
+       <?php $__s3JnvBeb82__ = \addons\cms\model\Channel::getChannelList(["id"=>"nav","type"=>"top","cache"=>"0","condition"=>"1=isnav","row"=>"20","orderby"=>"weigh","orderway"=>"desc"]); if(is_array($__s3JnvBeb82__) || $__s3JnvBeb82__ instanceof \think\Collection || $__s3JnvBeb82__ instanceof \think\Paginator): $i = 0; $__LIST__ = $__s3JnvBeb82__;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$nav): $mod = ($i % 2 );++$i;?>
         <li>
             <a href="<?php echo $nav['url']; ?>"><?php echo $nav['name']; ?></a>
             <?php if($nav['has_child']): ?>
                 <ul>
-                    <?php $__jChtqoJPmx__ = \addons\cms\model\Channel::getChannelList(["id"=>"son","type"=>"son","condition"=>"1=isnav","typeid"=>$nav['id'],"cache"=>"0","row"=>"20"]); if(is_array($__jChtqoJPmx__) || $__jChtqoJPmx__ instanceof \think\Collection || $__jChtqoJPmx__ instanceof \think\Paginator): $i = 0; $__LIST__ = $__jChtqoJPmx__;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$son): $mod = ($i % 2 );++$i;?>
+                    <?php $__AezYJTVGqa__ = \addons\cms\model\Channel::getChannelList(["id"=>"son","type"=>"son","condition"=>"1=isnav","typeid"=>$nav['id'],"cache"=>"0","row"=>"20"]); if(is_array($__AezYJTVGqa__) || $__AezYJTVGqa__ instanceof \think\Collection || $__AezYJTVGqa__ instanceof \think\Paginator): $i = 0; $__LIST__ = $__AezYJTVGqa__;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$son): $mod = ($i % 2 );++$i;?>
                         <li><a href="<?php echo $son['url']; ?>"><?php echo $son['name']; ?></a>
                         <?php if($son['has_child']): ?>
                             <ul>
-                            <?php $__HXU8anjOrb__ = \addons\cms\model\Channel::getChannelList(["id"=>"sons","condition"=>"1=isnav","type"=>"son","typeid"=>$son['id'],"cache"=>"0"]); if(is_array($__HXU8anjOrb__) || $__HXU8anjOrb__ instanceof \think\Collection || $__HXU8anjOrb__ instanceof \think\Paginator): $i = 0; $__LIST__ = $__HXU8anjOrb__;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$sons): $mod = ($i % 2 );++$i;?>
+                            <?php $__JMzWnLZ6Ub__ = \addons\cms\model\Channel::getChannelList(["id"=>"sons","condition"=>"1=isnav","type"=>"son","typeid"=>$son['id'],"cache"=>"0"]); if(is_array($__JMzWnLZ6Ub__) || $__JMzWnLZ6Ub__ instanceof \think\Collection || $__JMzWnLZ6Ub__ instanceof \think\Paginator): $i = 0; $__LIST__ = $__JMzWnLZ6Ub__;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$sons): $mod = ($i % 2 );++$i;?>
                                 <li><a href="<?php echo $sons['url']; ?>"><?php echo $sons['name']; ?></a></li>
-                            <?php endforeach; endif; else: echo "" ;endif; $__LASTLIST__=$__HXU8anjOrb__; ?>
+                            <?php endforeach; endif; else: echo "" ;endif; $__LASTLIST__=$__JMzWnLZ6Ub__; ?>
                             </ul> 
                         <?php endif; ?>
                         </li>
-                    <?php endforeach; endif; else: echo "" ;endif; $__LASTLIST__=$__jChtqoJPmx__; ?>
+                    <?php endforeach; endif; else: echo "" ;endif; $__LASTLIST__=$__AezYJTVGqa__; ?>
                 </ul>
             <?php endif; ?>
         </li>
-        <?php endforeach; endif; else: echo "" ;endif; $__LASTLIST__=$__f26hW4vmyB__; ?>
+        <?php endforeach; endif; else: echo "" ;endif; $__LASTLIST__=$__s3JnvBeb82__; ?>
       </ul> 
       <!--change-language--> 
       <div class="change-language ensemble"> 
@@ -133,11 +134,11 @@
    <!-- banner --> 
    <section class="slider_banner swiper-container"> 
     <div class="swiper-wrapper"> 
-    <?php $__DgnapBJ0U7__ = \addons\cms\model\Block::getBlockList(["id"=>"block","name"=>"banner","orderby"=>"weigh","orderway"=>"desc"]); if(is_array($__DgnapBJ0U7__) || $__DgnapBJ0U7__ instanceof \think\Collection || $__DgnapBJ0U7__ instanceof \think\Paginator): $i = 0; $__LIST__ = $__DgnapBJ0U7__;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$block): $mod = ($i % 2 );++$i;?>   
+    <?php $__Qk3ybxUA60__ = \addons\cms\model\Block::getBlockList(["id"=>"block","name"=>"banner","orderby"=>"weigh","orderway"=>"desc"]); if(is_array($__Qk3ybxUA60__) || $__Qk3ybxUA60__ instanceof \think\Collection || $__Qk3ybxUA60__ instanceof \think\Paginator): $i = 0; $__LIST__ = $__Qk3ybxUA60__;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$block): $mod = ($i % 2 );++$i;?>   
       <div class="swiper-slide">
         <a href="<?php echo $block['url']; ?>"><img src="<?php echo $block['image']; ?>" alt=""></a>
       </div> 
-    <?php endforeach; endif; else: echo "" ;endif; $__LASTLIST__=$__DgnapBJ0U7__; ?>
+    <?php endforeach; endif; else: echo "" ;endif; $__LASTLIST__=$__Qk3ybxUA60__; ?>
     </div> 
     <div class="slider_swiper_control"> 
      <div class="banner_button_prev"></div> 
@@ -157,53 +158,13 @@
       <section class="feature_item_wrap wow fadeInUpA" data-wow-delay="1.3s" data-wow-duration=".8s"> 
        <div class="feature_items"> 
         <ul class="swiper-wrapper"> 
-        <?php $__HBU3SelKrE__ = \addons\cms\model\Channel::getChannelList(["id"=>"channel","type"=>"son","typeid"=>"44","orderby"=>"weigh","orderway"=>"asc"]); if(is_array($__HBU3SelKrE__) || $__HBU3SelKrE__ instanceof \think\Collection || $__HBU3SelKrE__ instanceof \think\Paginator): $i = 0; $__LIST__ = $__HBU3SelKrE__;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$channel): $mod = ($i % 2 );++$i;$__WEILXH1o0T__ = \addons\cms\model\Archives::getArchivesList(["id"=>"prod","channel"=>$channel['id'],"orderby"=>"weigh","orderway"=>"desc","row"=>"20"]); if(is_array($__WEILXH1o0T__) || $__WEILXH1o0T__ instanceof \think\Collection || $__WEILXH1o0T__ instanceof \think\Paginator): $i = 0; $__LIST__ = $__WEILXH1o0T__;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$prod): $mod = ($i % 2 );++$i;?>
+        <?php $__NomXyQJSKd__ = \addons\cms\model\Channel::getChannelList(["id"=>"channel","type"=>"son","typeid"=>"44","orderby"=>"weigh","orderway"=>"asc"]); if(is_array($__NomXyQJSKd__) || $__NomXyQJSKd__ instanceof \think\Collection || $__NomXyQJSKd__ instanceof \think\Paginator): $i = 0; $__LIST__ = $__NomXyQJSKd__;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$channel): $mod = ($i % 2 );++$i;$__GjWQEMrp5f__ = \addons\cms\model\Archives::getArchivesList(["id"=>"prod","channel"=>$channel['id'],"orderby"=>"weigh","orderway"=>"desc","row"=>"20"]); if(is_array($__GjWQEMrp5f__) || $__GjWQEMrp5f__ instanceof \think\Collection || $__GjWQEMrp5f__ instanceof \think\Paginator): $i = 0; $__LIST__ = $__GjWQEMrp5f__;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$prod): $mod = ($i % 2 );++$i;?>
         <li class="feature_item swiper-slide"> 
           <figure> 
            <span class="item_img"><img src="<?php echo $prod['image']; ?>"></span> 
            <h4 class="pd_tit"> <a href="<?php echo $prod['url']; ?>"><?php echo $prod['title']; ?></a></h4> 
           </figure> </li>
-          <?php endforeach; endif; else: echo "" ;endif; $__LASTLIST__=$__WEILXH1o0T__; endforeach; endif; else: echo "" ;endif; $__LASTLIST__=$__HBU3SelKrE__; ?>
-         <li class="feature_item swiper-slide"> 
-          <figure> 
-           <span class="item_img"><img src="/template/default/images/pd01.jpg"></span> 
-           <h4 class="pd_tit"> <a href="">Chemical products</a></h4> 
-          </figure> </li> 
-         <li class="feature_item swiper-slide"> 
-          <figure> 
-           <span class="item_img"><img src="/template/default/images/pd02.jpg"></span> 
-           <h4 class="pd_tit"> <a href="">Ingredient powder </a></h4> 
-          </figure> </li> 
-         <li class="feature_item swiper-slide"> 
-          <figure> 
-           <span class="item_img"><img src="/template/default/images/pd03.jpg"></span> 
-           <h4 class="pd_tit"> <a href="">extractive </a></h4> 
-          </figure> </li> 
-         <li class="feature_item swiper-slide"> 
-          <figure> 
-           <span class="item_img"><img src="/template/default/images/pd04.jpg"></span> 
-           <h4 class="pd_tit"> <a href="">Chemical products</a></h4> 
-          </figure> </li> 
-         <li class="feature_item swiper-slide"> 
-          <figure> 
-           <span class="item_img"><img src="/template/default/images/pd01.jpg"></span> 
-           <h4 class="pd_tit"> <a href="">Chemical products</a></h4> 
-          </figure> </li> 
-         <li class="feature_item swiper-slide"> 
-          <figure> 
-           <span class="item_img"><img src="/template/default/images/pd02.jpg"></span> 
-           <h4 class="pd_tit"> <a href="">Ingredient powder </a></h4> 
-          </figure> </li> 
-         <li class="feature_item swiper-slide"> 
-          <figure> 
-           <span class="item_img"><img src="/template/default/images/pd03.jpg"></span> 
-           <h4 class="pd_tit"> <a href="">extractive </a></h4> 
-          </figure> </li> 
-         <li class="feature_item swiper-slide"> 
-          <figure> 
-           <span class="item_img"><img src="/template/default/images/pd04.jpg"></span> 
-           <h4 class="pd_tit"> <a href="">Chemical products</a></h4> 
-          </figure> </li> 
+          <?php endforeach; endif; else: echo "" ;endif; $__LASTLIST__=$__GjWQEMrp5f__; endforeach; endif; else: echo "" ;endif; $__LASTLIST__=$__NomXyQJSKd__; ?>
         </ul> 
         <div class="feature-pagination"></div> 
         <div class="feature_button_control"> 
@@ -211,7 +172,7 @@
          <div class="feature_button_next"></div> 
         </div> 
        </div> 
-       <a href="" class="more_btn">more&gt;&gt;</a> 
+       <a href="/Products" class="more_btn">more&gt;&gt;</a> 
       </section> 
      </section> 
     </section> 
@@ -224,43 +185,40 @@
       </div> 
       <div class="company_info_wrap"> 
        <div class="company_img wow fadeInLeftA" data-wow-delay="1s" data-wow-duration="1s">
-        <img src="/template/default/images/about.jpg">
+        <?php $__a9xHrDg0Tt__ = \addons\cms\model\Block::getBlockList(["id"=>"block","name"=>"about","orderby"=>"weigh","orderway"=>"desc"]); if(is_array($__a9xHrDg0Tt__) || $__a9xHrDg0Tt__ instanceof \think\Collection || $__a9xHrDg0Tt__ instanceof \think\Paginator): $i = 0; $__LIST__ = $__a9xHrDg0Tt__;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$block): $mod = ($i % 2 );++$i;?>
+          <img src="<?php echo $block['image']; ?>" alt="About Us">
+        <?php endforeach; endif; else: echo "" ;endif; $__LASTLIST__=$__a9xHrDg0Tt__; ?>
        </div> 
-       <div class="company_information wow fadeInRightA" data-wow-delay="1s" data-wow-duration="1s"> 
+       <div class="company_information wow fadeInRightA" data-wow-delay="1s" data-wow-duration="1s" style="height: 500px; overflow: hidden;"> 
         <h4 class="about_tit">what we do</h4> 
+        <?php $__C2bzx9ADkS__ = \addons\cms\model\Block::getBlockList(["id"=>"block","name"=>"about","orderby"=>"weigh","orderway"=>"desc"]); if(is_array($__C2bzx9ADkS__) || $__C2bzx9ADkS__ instanceof \think\Collection || $__C2bzx9ADkS__ instanceof \think\Paginator): $i = 0; $__LIST__ = $__C2bzx9ADkS__;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$block): $mod = ($i % 2 );++$i;?>
         <div class="about_text">
-          Chengdu Chemical Co., Ltd. was founded in 2000 With mature technology and excellent R &amp; D personnel, we are getting better and better on the road of developing products In 2019, our company has successfully registered as a listed company, bringing different quality assurance to customers, which is worthy of your trust and attention Good technology makes good products
+            <?php echo $block['content']; ?> 
         </div> 
-        <a href="" class="about_btn">more&gt;&gt;</a> 
+        <a href="<?php echo $block['url']; ?>" class="about_btn">more&gt;&gt;</a> 
+        <?php endforeach; endif; else: echo "" ;endif; $__LASTLIST__=$__C2bzx9ADkS__; ?>
        </div> 
       </div> 
      </section> 
     </section> 
-    <section class="index_inquiry_wrap" style="background-image:url(/template/default/images/inquriybg.jpg)"> 
+    <!-- <section class="index_inquiry_wrap" style="background-image:url(/template/default/images/inquriybg.jpg)">  -->
+    <section class="index_inquiry_wrap" style="background-image:url(/template/default/images/20230703113032.jpg)"> 
      <div class="inquiry_desc wow fadeInUpA" data-wow-delay=".8s" data-wow-duration="1s">
       learn more
      </div> 
      <p class=" wow fadeInUpA" data-wow-delay="1.2s" data-wow-duration="1s">Our newsletters, the latest information about our products, news and special offers.</p> 
-     <a href="javascript:" class="inquiry_btn wow fadeInUpA" data-wow-delay="1.4s" data-wow-duration="1">Click for manual</a> 
+     <a href="/about" class="inquiry_btn wow fadeInUpA" data-wow-delay="1.4s" data-wow-duration="1">Click for manual</a> 
     </section> 
     <section class="index_advantage_container"> 
      <section class="layout"> 
       <ul class="advantage_items"> 
-       <li class="advantage_item wow fadeInUpA" data-wow-delay="1.8s" data-wow-duration="1s"> <span class="icon_img"><img src="/template/default/images/icon01.png"></span> 
-        <div class="advantage_info"> 
-         <h4 class="ad_tit"><a href="">personnel</a></h4> 
-         <p class="ad_desc">The company introduces a large number of talents, researches projects and is responsible for customers</p> 
-        </div> </li> 
-       <li class="advantage_item wow fadeInUpA" data-wow-delay="2s" data-wow-duration="1s"> <span class="icon_img"><img src="/template/default/images/icon02.png"></span> 
-        <div class="advantage_info"> 
-         <h4 class="ad_tit"><a href="">Research</a></h4> 
-         <p class="ad_desc">Professional research project team for different customer needs</p> 
-        </div> </li> 
-       <li class="advantage_item wow fadeInUpA" data-wow-delay="2.2s" data-wow-duration="1s"> <span class="icon_img"><img src="/template/default/images/icon03.png"></span> 
-        <div class="advantage_info"> 
-         <h4 class="ad_tit"><a href="">technology</a></h4> 
-         <p class="ad_desc">New technology transformation mode,research high quality products </p> 
-        </div> </li> 
+        <?php $__ZRDbSHACK7__ = \addons\cms\model\Block::getBlockList(["id"=>"block","name"=>"about-info","orderby"=>"weigh","orderway"=>"desc"]); if(is_array($__ZRDbSHACK7__) || $__ZRDbSHACK7__ instanceof \think\Collection || $__ZRDbSHACK7__ instanceof \think\Paginator): $i = 0; $__LIST__ = $__ZRDbSHACK7__;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$block): $mod = ($i % 2 );++$i;if(!(empty($block['images']) || (($block['images'] instanceof \think\Collection || $block['images'] instanceof \think\Paginator ) && $block['images']->isEmpty()))): if(is_array(explode(',',$block['images'])) || explode(',',$block['images']) instanceof \think\Collection || explode(',',$block['images']) instanceof \think\Paginator): $i = 0; $__LIST__ = explode(',',$block['images']);if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$image): $mod = ($i % 2 );++$i;?>
+              <li class="advantage_item wow fadeInUpA" data-wow-delay="1.8s" data-wow-duration="1s"> <span class="icon_img"><img src="<?php echo $image; ?>"></span> 
+                <div class="advantage_info"> 
+                 <h4 class="ad_tit"><a href=""><?php echo $block['intro'][$key]['info']; ?></a></h4> 
+                 <p class="ad_desc"><?php echo $block['intro'][$key]['txt']; ?></p> 
+                </div> </li> 
+          <?php endforeach; endif; else: echo "" ;endif; endif; endforeach; endif; else: echo "" ;endif; $__LASTLIST__=$__ZRDbSHACK7__; ?>
       </ul> 
      </section> 
      <span class="position_icon wow zoomInA" data-wow-delay="2.2s" data-wow-duration="1s"><img src="/template/default/images/logo.png"></span> 
@@ -269,25 +227,22 @@
     <section class="index_application_container"> 
      <section class="layout"> 
       <div class="index_hd wow fadeInUpA" data-wow-delay=".8s" data-wow-duration=".8s"> 
-       <h2 class="hd_title">application</h2> 
-       <p class="sub_tit">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p> 
+       <h2 class="hd_title">Product Highlights</h2> 
+       <!-- <p class="sub_tit">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>  -->
       </div> 
       <ul class="application_items"> 
-       <li class="application_item wow fadeInUpA" data-wow-delay="1.2s" data-wow-duration="1s"> <span class="application_img"><img src="/template/default/images/category01.jpg"></span> <h4 class="application_info"><a href="">Cosmetic additives</a></h4> </li> 
-       <li class="application_item wow fadeInUpA" data-wow-delay="1.4s" data-wow-duration="1s"> <span class="application_img"><img src="/template/default/images/category02.jpg"></span> <h4 class="application_info"><a href="">food additives</a></h4> </li> 
-       <li class="application_item wow fadeInUpA" data-wow-delay="1.6s" data-wow-duration="1s"> <span class="application_img"><img src="/template/default/images/category03.jpg"></span> <h4 class="application_info"><a href="">Animal feed additive</a></h4> </li> 
-       <li class="application_item wow fadeInUpA" data-wow-delay="1.8s" data-wow-duration="1s"> <span class="application_img"><img src="/template/default/images/category04.jpg"></span> <h4 class="application_info"><a href="">Agricultural fertilizer additive</a></h4> </li> 
+        <?php $__nPDF7ZlVrw__ = \addons\cms\model\Block::getBlockList(["id"=>"block","name"=>"hlight","orderby"=>"weigh","orderway"=>"desc"]); if(is_array($__nPDF7ZlVrw__) || $__nPDF7ZlVrw__ instanceof \think\Collection || $__nPDF7ZlVrw__ instanceof \think\Paginator): $i = 0; $__LIST__ = $__nPDF7ZlVrw__;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$block): $mod = ($i % 2 );++$i;if(!(empty($block['images']) || (($block['images'] instanceof \think\Collection || $block['images'] instanceof \think\Paginator ) && $block['images']->isEmpty()))): if(is_array(explode(',',$block['images'])) || explode(',',$block['images']) instanceof \think\Collection || explode(',',$block['images']) instanceof \think\Paginator): $i = 0; $__LIST__ = explode(',',$block['images']);if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$image): $mod = ($i % 2 );++$i;?>
+              <li class="application_item wow fadeInUpA" data-wow-delay="1.2s" data-wow-duration="1s"> <span class="application_img"><img src="<?php echo $image; ?>"></span> <h4 class="application_info"><a href=""><?php echo $block['intro'][$key]['txt']; ?></a></h4> </li> 
+        <?php endforeach; endif; else: echo "" ;endif; endif; endforeach; endif; else: echo "" ;endif; $__LASTLIST__=$__nPDF7ZlVrw__; ?>
       </ul> 
      </section> 
     </section> 
     <!--index_application_container end--> 
     <section class="icon_list_contianer layout" style="background-image: url(/template/default/images/icons_bg.jpg)"> 
      <ul class="icon_items"> 
-      <li class="icon_item wow fadeInUpA" data-wow-delay=".8s" data-wow-duration="1s"> <span class="icon_img"><img src="/template/default/images/01.png" alt=""></span> <span class="icon_num">3000</span> <h3 class="icon_info">Lorem ipsum</h3> </li> 
-      <li class="icon_item wow fadeInUpA" data-wow-delay=".8s" data-wow-duration="1s"> <span class="icon_img"><img src="/template/default/images/02.png" alt=""></span> <span class="icon_num">3000</span> <h3 class="icon_info">Lorem ipsum dolor</h3> </li> 
-      <li class="icon_item wow fadeInUpA" data-wow-delay="1s" data-wow-duration="1s"> <span class="icon_img"><img src="/template/default/images/03.png" alt=""></span> <span class="icon_num">3000</span> <h3 class="icon_info">Lorem ipsum dolor sit ame consectetur</h3> </li> 
-      <li class="icon_item wow fadeInUpA" data-wow-delay="1.2s" data-wow-duration="1s"> <span class="icon_img"><img src="/template/default/images/04.png" alt=""></span> <span class="icon_num">3000</span> <h3 class="icon_info">Lorem ipsum dolor sit amet</h3> </li> 
-      <li class="icon_item wow fadeInUpA" data-wow-delay="1.4s" data-wow-duration="1s"> <span class="icon_img"><img src="/template/default/images/05.png" alt=""></span> <span class="icon_num">3000</span> <h3 class="icon_info">Lorem ipsum dolor sit</h3> </li> 
+      <?php $__8dlxQEjTar__ = \addons\cms\model\Block::getBlockList(["id"=>"block","name"=>"abount-params","orderby"=>"weigh","orderway"=>"desc"]); if(is_array($__8dlxQEjTar__) || $__8dlxQEjTar__ instanceof \think\Collection || $__8dlxQEjTar__ instanceof \think\Paginator): $i = 0; $__LIST__ = $__8dlxQEjTar__;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$block): $mod = ($i % 2 );++$i;if(!(empty($block['images']) || (($block['images'] instanceof \think\Collection || $block['images'] instanceof \think\Paginator ) && $block['images']->isEmpty()))): if(is_array(explode(',',$block['images'])) || explode(',',$block['images']) instanceof \think\Collection || explode(',',$block['images']) instanceof \think\Paginator): $i = 0; $__LIST__ = explode(',',$block['images']);if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$image): $mod = ($i % 2 );++$i;?>
+              <li class="icon_item wow fadeInUpA" data-wow-delay=".8s" data-wow-duration="1s"> <span class="icon_img"><img src="<?php echo $image; ?>" alt=""></span> <span class="icon_num"><?php echo $block['intro'][$key]['txt']; ?></span> <h3 class="icon_info"><?php echo $block['intro'][$key]['info']; ?></h3> </li> 
+        <?php endforeach; endif; else: echo "" ;endif; endif; endforeach; endif; else: echo "" ;endif; $__LASTLIST__=$__8dlxQEjTar__; ?>
      </ul> 
     </section> 
     <!--index_news_container--> 
@@ -298,37 +253,31 @@
        <p class="sub_tit">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p> 
       </div> 
       <div class="news_container"> 
+        <?php $__zOV9Qa5LEG__ = \addons\cms\model\Archives::getArchivesList(["id"=>"new","channel"=>"67","orderby"=>"weigh","orderway"=>"desc","row"=>"1","addon"=>"content"]); if(is_array($__zOV9Qa5LEG__) || $__zOV9Qa5LEG__ instanceof \think\Collection || $__zOV9Qa5LEG__ instanceof \think\Paginator): $i = 0; $__LIST__ = $__zOV9Qa5LEG__;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$new): $mod = ($i % 2 );++$i;?>
        <div class="news_right wow fadeInRightA" data-wow-delay=".8s" data-wow-duration="1s"> 
-        <span class="news_img"><img src="/template/default/images/news01.jpg"></span> 
+        <span class="news_img"><img src="<?php echo $new['image']; ?>"></span> 
         <div class="news_conut"> 
-         <time class="news_time"><span>10</span><span>2020/1</span></time> 
-         <h4 class="news_title"><a href="">Won the trophy on the same day, ranking ...</a></h4> 
+         <time class="news_time"><span><?php echo date("d",$new['publishtime']); ?></span><span><?php echo date("Y-m",$new['publishtime']); ?></span></time> 
+         <h4 class="news_title"><a href=<?php echo $new['url']; ?>><?php echo $new['title']; ?></a></h4> 
          <div class="news_info">
-           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+           <?php echo $new['description']; ?>
          </div> 
         </div> 
        </div> 
+       <?php endforeach; endif; else: echo "" ;endif; $__LASTLIST__=$__zOV9Qa5LEG__; ?>
        <div class="news_left wow fadeInLeftA" data-wow-delay=".8s" data-wow-duration="1s"> 
+        <?php $__hcbeUNT1J5__ = \addons\cms\model\Archives::getArchivesList(["id"=>"new","channel"=>"68","orderby"=>"weigh","orderway"=>"desc","row"=>"2","addon"=>"content"]); if(is_array($__hcbeUNT1J5__) || $__hcbeUNT1J5__ instanceof \think\Collection || $__hcbeUNT1J5__ instanceof \think\Paginator): $i = 0; $__LIST__ = $__hcbeUNT1J5__;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$new): $mod = ($i % 2 );++$i;?>
         <div class="news_item"> 
-         <figure> 
-          <time class="news_time"><span>10</span><span>2020/1</span></time> 
-          <h4 class="news_title"><a href="">Won the trophy on the same day, ranking first in the industry ...</a></h4> 
-          <div class="news_info">
-           Obtain certain achievements in the industry and give customers trust
-          </div> 
-          <a href="" class="news_more">more&gt;&gt;</a>
-         </figure> 
-        </div> 
-        <div class="news_item"> 
-         <figure> 
-          <time class="news_time"><span>10</span><span>2020/1</span></time> 
-          <h4 class="news_title"><a href="">Good technology makes products...</a></h4> 
-          <div class="news_info">
-           Absolute guarantee in quality, leading in the industry in service
-          </div> 
-          <a href="" class="news_more">more&gt;&gt;</a>
-         </figure> 
-        </div> 
+          <figure> 
+           <time class="news_time"><span><?php echo date("d",$new['publishtime']); ?></span><span><?php echo date("Y-m",$new['publishtime']); ?></span></time> 
+           <h4 class="news_title"><a href=<?php echo $new['url']; ?>><?php echo $new['title']; ?></a></h4> 
+           <div class="news_info">
+            <?php echo $new['description']; ?>
+           </div> 
+           <a href="<?php echo $new['url']; ?>" class="news_more">more&gt;&gt;</a>
+          </figure> 
+         </div> 
+         <?php endforeach; endif; else: echo "" ;endif; $__LASTLIST__=$__hcbeUNT1J5__; ?>
        </div> 
       </div> 
      </section> 
@@ -339,18 +288,15 @@
    <!-- web_footer start --> 
    <footer class="web_footer"> 
     <ul class="foot_nav wow fadeInUpA" data-wow-delay="1s" data-wow-duration=".8s"> 
-     <li><a href="">home</a></li> 
-     <li><a href="">about us</a></li> 
-     <li><a href="">product</a></li> 
-     <li><a href="">news</a></li> 
-     <li><a href="">faq</a></li> 
-     <li><a href="">contact us</a></li> 
+     <?php $__so0v9XWUmG__ = \addons\cms\model\Channel::getChannelList(["id"=>"nav","type"=>"top","cache"=>"0","condition"=>"1=isnav","row"=>"20","orderby"=>"weigh","orderway"=>"desc"]); if(is_array($__so0v9XWUmG__) || $__so0v9XWUmG__ instanceof \think\Collection || $__so0v9XWUmG__ instanceof \think\Paginator): $i = 0; $__LIST__ = $__so0v9XWUmG__;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$nav): $mod = ($i % 2 );++$i;?>
+        <li><a href="<?php echo $nav['url']; ?>"><?php echo $nav['name']; ?></a> </li>
+     <?php endforeach; endif; else: echo "" ;endif; $__LASTLIST__=$__so0v9XWUmG__; ?>
     </ul> 
     <div class="foot_bottom layout"> 
      <ul class="foot_contact wow fadeInUpA" data-wow-delay="1.3s" data-wow-duration=".8s"> 
-      <li class="foot_email"><a href="matial:">info@psdfreebies.com</a></li> 
-      <li class="foot_address">Address:No. 18, Huashan Road, Xinbei District Changzhou, Jiangsu, China (Mainland)</li> 
-      <li class="foot_phone"><a href="tel:">Tel:+123 456 7890</a></li> 
+      <li class="foot_email"><a href="matial:"><?php echo $site['emaill']; ?></a></li> 
+      <li class="foot_address">Address:West of Yaodu Avenue, Tuojiang Town, Jianghua Yao Autonomous County, Yongzhou City, Hunan Province, P.R,China</li> 
+      <li class="foot_phone"><a href="tel:">Tel:<?php echo $site['tell']; ?></a></li> 
      </ul> 
      <ul class="foot_sns wow fadeInUpA" data-wow-delay="1.5s" data-wow-duration=".8s"> 
       <li><a href=""><img src="/template/default/images/sns01.png" alt=""></a></li> 
@@ -359,8 +305,9 @@
       <li><a href=""><img src="/template/default/images/sns04.png" alt=""></a></li> 
      </ul> 
      <div class="copyright wow fadeInUpA" data-wow-delay="1.7s" data-wow-duration=".8s">
-      Copyright © 2019 
-      <span class="txt_impt">Goodao.cn</span> All Rights Reserved
+      <!-- Copyright © 2019 
+      <span class="txt_impt">Goodao.cn</span> All Rights Reserved -->
+      <?php echo $site['beian']; ?>
      </div> 
     </div> 
    </footer> 

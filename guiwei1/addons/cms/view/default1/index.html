@@ -36,46 +36,6 @@
           </figure> </li>
           {/cms:arclist}
         {/cms:channellist}
-         <!-- <li class="feature_item swiper-slide"> 
-          <figure> 
-           <span class="item_img"><img src="__CDN__/template/default/images/pd01.jpg"></span> 
-           <h4 class="pd_tit"> <a href="">Chemical products</a></h4> 
-          </figure> </li> 
-         <li class="feature_item swiper-slide"> 
-          <figure> 
-           <span class="item_img"><img src="__CDN__/template/default/images/pd02.jpg"></span> 
-           <h4 class="pd_tit"> <a href="">Ingredient powder </a></h4> 
-          </figure> </li> 
-         <li class="feature_item swiper-slide"> 
-          <figure> 
-           <span class="item_img"><img src="__CDN__/template/default/images/pd03.jpg"></span> 
-           <h4 class="pd_tit"> <a href="">extractive </a></h4> 
-          </figure> </li> 
-         <li class="feature_item swiper-slide"> 
-          <figure> 
-           <span class="item_img"><img src="__CDN__/template/default/images/pd04.jpg"></span> 
-           <h4 class="pd_tit"> <a href="">Chemical products</a></h4> 
-          </figure> </li> 
-         <li class="feature_item swiper-slide"> 
-          <figure> 
-           <span class="item_img"><img src="__CDN__/template/default/images/pd01.jpg"></span> 
-           <h4 class="pd_tit"> <a href="">Chemical products</a></h4> 
-          </figure> </li> 
-         <li class="feature_item swiper-slide"> 
-          <figure> 
-           <span class="item_img"><img src="__CDN__/template/default/images/pd02.jpg"></span> 
-           <h4 class="pd_tit"> <a href="">Ingredient powder </a></h4> 
-          </figure> </li> 
-         <li class="feature_item swiper-slide"> 
-          <figure> 
-           <span class="item_img"><img src="__CDN__/template/default/images/pd03.jpg"></span> 
-           <h4 class="pd_tit"> <a href="">extractive </a></h4> 
-          </figure> </li> 
-         <li class="feature_item swiper-slide"> 
-          <figure> 
-           <span class="item_img"><img src="__CDN__/template/default/images/pd04.jpg"></span> 
-           <h4 class="pd_tit"> <a href="">Chemical products</a></h4> 
-          </figure> </li>  -->
         </ul> 
         <div class="feature-pagination"></div> 
         <div class="feature_button_control"> 
@@ -83,7 +43,7 @@
          <div class="feature_button_next"></div> 
         </div> 
        </div> 
-       <a href="" class="more_btn">more&gt;&gt;</a> 
+       <a href="/Products" class="more_btn">more&gt;&gt;</a> 
       </section> 
      </section> 
     </section> 
@@ -96,43 +56,44 @@
       </div> 
       <div class="company_info_wrap"> 
        <div class="company_img wow fadeInLeftA" data-wow-delay="1s" data-wow-duration="1s">
-        <img src="__CDN__/template/default/images/about.jpg">
+        {cms:blocklist id="block" name="about" orderby="weigh" orderway="desc" }
+          <img src="{$block.image}" alt="About Us">
+        {/cms:blocklist}
        </div> 
-       <div class="company_information wow fadeInRightA" data-wow-delay="1s" data-wow-duration="1s"> 
+       <div class="company_information wow fadeInRightA" data-wow-delay="1s" data-wow-duration="1s" style="height: 500px; overflow: hidden;"> 
         <h4 class="about_tit">what we do</h4> 
+        {cms:blocklist id="block" name="about" orderby="weigh" orderway="desc" }
         <div class="about_text">
-          Chengdu Chemical Co., Ltd. was founded in 2000 With mature technology and excellent R &amp; D personnel, we are getting better and better on the road of developing products In 2019, our company has successfully registered as a listed company, bringing different quality assurance to customers, which is worthy of your trust and attention Good technology makes good products
+            {$block.content} 
         </div> 
-        <a href="" class="about_btn">more&gt;&gt;</a> 
+        <a href="{$block.url}" class="about_btn">more&gt;&gt;</a> 
+        {/cms:blocklist}
        </div> 
       </div> 
      </section> 
     </section> 
-    <section class="index_inquiry_wrap" style="background-image:url(__CDN__/template/default/images/inquriybg.jpg)"> 
+    <!-- <section class="index_inquiry_wrap" style="background-image:url(__CDN__/template/default/images/inquriybg.jpg)">  -->
+    <section class="index_inquiry_wrap" style="background-image:url(__CDN__/template/default/images/20230703113032.jpg)"> 
      <div class="inquiry_desc wow fadeInUpA" data-wow-delay=".8s" data-wow-duration="1s">
       learn more
      </div> 
      <p class=" wow fadeInUpA" data-wow-delay="1.2s" data-wow-duration="1s">Our newsletters, the latest information about our products, news and special offers.</p> 
-     <a href="javascript:" class="inquiry_btn wow fadeInUpA" data-wow-delay="1.4s" data-wow-duration="1">Click for manual</a> 
+     <a href="/about" class="inquiry_btn wow fadeInUpA" data-wow-delay="1.4s" data-wow-duration="1">Click for manual</a> 
     </section> 
     <section class="index_advantage_container"> 
      <section class="layout"> 
       <ul class="advantage_items"> 
-       <li class="advantage_item wow fadeInUpA" data-wow-delay="1.8s" data-wow-duration="1s"> <span class="icon_img"><img src="__CDN__/template/default/images/icon01.png"></span> 
-        <div class="advantage_info"> 
-         <h4 class="ad_tit"><a href="">personnel</a></h4> 
-         <p class="ad_desc">The company introduces a large number of talents, researches projects and is responsible for customers</p> 
-        </div> </li> 
-       <li class="advantage_item wow fadeInUpA" data-wow-delay="2s" data-wow-duration="1s"> <span class="icon_img"><img src="__CDN__/template/default/images/icon02.png"></span> 
-        <div class="advantage_info"> 
-         <h4 class="ad_tit"><a href="">Research</a></h4> 
-         <p class="ad_desc">Professional research project team for different customer needs</p> 
-        </div> </li> 
-       <li class="advantage_item wow fadeInUpA" data-wow-delay="2.2s" data-wow-duration="1s"> <span class="icon_img"><img src="__CDN__/template/default/images/icon03.png"></span> 
-        <div class="advantage_info"> 
-         <h4 class="ad_tit"><a href="">technology</a></h4> 
-         <p class="ad_desc">New technology transformation mode,research high quality products </p> 
-        </div> </li> 
+        {cms:blocklist id="block" name="about-info" orderby="weigh" orderway="desc" } 
+          {notempty name="$block.images"}
+          {volist name="$block.images|explode=',',###" id="image"}
+              <li class="advantage_item wow fadeInUpA" data-wow-delay="1.8s" data-wow-duration="1s"> <span class="icon_img"><img src="{$image}"></span> 
+                <div class="advantage_info"> 
+                 <h4 class="ad_tit"><a href="">{$block.intro[$key]['info']}</a></h4> 
+                 <p class="ad_desc">{$block.intro[$key]['txt']}</p> 
+                </div> </li> 
+          {/volist}
+          {/notempty}
+{/cms:blocklist}
       </ul> 
      </section> 
      <span class="position_icon wow zoomInA" data-wow-delay="2.2s" data-wow-duration="1s"><img src="__CDN__/template/default/images/logo.png"></span> 
@@ -141,25 +102,30 @@
     <section class="index_application_container"> 
      <section class="layout"> 
       <div class="index_hd wow fadeInUpA" data-wow-delay=".8s" data-wow-duration=".8s"> 
-       <h2 class="hd_title">application</h2> 
-       <p class="sub_tit">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p> 
+       <h2 class="hd_title">Product Highlights</h2> 
+       <!-- <p class="sub_tit">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>  -->
       </div> 
       <ul class="application_items"> 
-       <li class="application_item wow fadeInUpA" data-wow-delay="1.2s" data-wow-duration="1s"> <span class="application_img"><img src="__CDN__/template/default/images/category01.jpg"></span> <h4 class="application_info"><a href="">Cosmetic additives</a></h4> </li> 
-       <li class="application_item wow fadeInUpA" data-wow-delay="1.4s" data-wow-duration="1s"> <span class="application_img"><img src="__CDN__/template/default/images/category02.jpg"></span> <h4 class="application_info"><a href="">food additives</a></h4> </li> 
-       <li class="application_item wow fadeInUpA" data-wow-delay="1.6s" data-wow-duration="1s"> <span class="application_img"><img src="__CDN__/template/default/images/category03.jpg"></span> <h4 class="application_info"><a href="">Animal feed additive</a></h4> </li> 
-       <li class="application_item wow fadeInUpA" data-wow-delay="1.8s" data-wow-duration="1s"> <span class="application_img"><img src="__CDN__/template/default/images/category04.jpg"></span> <h4 class="application_info"><a href="">Agricultural fertilizer additive</a></h4> </li> 
+        {cms:blocklist id="block" name="hlight" orderby="weigh" orderway="desc" } 
+        {notempty name="$block.images"}
+        {volist name="$block.images|explode=',',###" id="image"}
+              <li class="application_item wow fadeInUpA" data-wow-delay="1.2s" data-wow-duration="1s"> <span class="application_img"><img src="{$image}"></span> <h4 class="application_info"><a href="">{$block.intro[$key]['txt']}</a></h4> </li> 
+        {/volist}
+        {/notempty}
+        {/cms:blocklist}
       </ul> 
      </section> 
     </section> 
     <!--index_application_container end--> 
     <section class="icon_list_contianer layout" style="background-image: url(__CDN__/template/default/images/icons_bg.jpg)"> 
      <ul class="icon_items"> 
-      <li class="icon_item wow fadeInUpA" data-wow-delay=".8s" data-wow-duration="1s"> <span class="icon_img"><img src="__CDN__/template/default/images/01.png" alt=""></span> <span class="icon_num">3000</span> <h3 class="icon_info">Lorem ipsum</h3> </li> 
-      <li class="icon_item wow fadeInUpA" data-wow-delay=".8s" data-wow-duration="1s"> <span class="icon_img"><img src="__CDN__/template/default/images/02.png" alt=""></span> <span class="icon_num">3000</span> <h3 class="icon_info">Lorem ipsum dolor</h3> </li> 
-      <li class="icon_item wow fadeInUpA" data-wow-delay="1s" data-wow-duration="1s"> <span class="icon_img"><img src="__CDN__/template/default/images/03.png" alt=""></span> <span class="icon_num">3000</span> <h3 class="icon_info">Lorem ipsum dolor sit ame consectetur</h3> </li> 
-      <li class="icon_item wow fadeInUpA" data-wow-delay="1.2s" data-wow-duration="1s"> <span class="icon_img"><img src="__CDN__/template/default/images/04.png" alt=""></span> <span class="icon_num">3000</span> <h3 class="icon_info">Lorem ipsum dolor sit amet</h3> </li> 
-      <li class="icon_item wow fadeInUpA" data-wow-delay="1.4s" data-wow-duration="1s"> <span class="icon_img"><img src="__CDN__/template/default/images/05.png" alt=""></span> <span class="icon_num">3000</span> <h3 class="icon_info">Lorem ipsum dolor sit</h3> </li> 
+      {cms:blocklist id="block" name="abount-params" orderby="weigh" orderway="desc" } 
+        {notempty name="$block.images"}
+        {volist name="$block.images|explode=',',###" id="image"}
+              <li class="icon_item wow fadeInUpA" data-wow-delay=".8s" data-wow-duration="1s"> <span class="icon_img"><img src="{$image}" alt=""></span> <span class="icon_num">{$block.intro[$key]['txt']}</span> <h3 class="icon_info">{$block.intro[$key]['info']}</h3> </li> 
+        {/volist}
+        {/notempty}
+        {/cms:blocklist}
      </ul> 
     </section> 
     <!--index_news_container--> 
@@ -170,37 +136,31 @@
        <p class="sub_tit">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p> 
       </div> 
       <div class="news_container"> 
+        {cms:arclist id="new" channel="67"  orderby="weigh" orderway="desc" row="1" addon="content"}
        <div class="news_right wow fadeInRightA" data-wow-delay=".8s" data-wow-duration="1s"> 
-        <span class="news_img"><img src="__CDN__/template/default/images/news01.jpg"></span> 
+        <span class="news_img"><img src="{$new.image}"></span> 
         <div class="news_conut"> 
-         <time class="news_time"><span>10</span><span>2020/1</span></time> 
-         <h4 class="news_title"><a href="">Won the trophy on the same day, ranking ...</a></h4> 
+         <time class="news_time"><span>{$new.publishtime|date="d",###}</span><span>{$new.publishtime|date="Y-m",###}</span></time> 
+         <h4 class="news_title"><a href={$new.url}>{$new.title}</a></h4> 
          <div class="news_info">
-           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+           {$new.description}
          </div> 
         </div> 
        </div> 
+       {/cms:arclist}
        <div class="news_left wow fadeInLeftA" data-wow-delay=".8s" data-wow-duration="1s"> 
+        {cms:arclist id="new" channel="68"  orderby="weigh" orderway="desc" row="2" addon="content"}
         <div class="news_item"> 
-         <figure> 
-          <time class="news_time"><span>10</span><span>2020/1</span></time> 
-          <h4 class="news_title"><a href="">Won the trophy on the same day, ranking first in the industry ...</a></h4> 
-          <div class="news_info">
-           Obtain certain achievements in the industry and give customers trust
-          </div> 
-          <a href="" class="news_more">more&gt;&gt;</a>
-         </figure> 
-        </div> 
-        <div class="news_item"> 
-         <figure> 
-          <time class="news_time"><span>10</span><span>2020/1</span></time> 
-          <h4 class="news_title"><a href="">Good technology makes products...</a></h4> 
-          <div class="news_info">
-           Absolute guarantee in quality, leading in the industry in service
-          </div> 
-          <a href="" class="news_more">more&gt;&gt;</a>
-         </figure> 
-        </div> 
+          <figure> 
+           <time class="news_time"><span>{$new.publishtime|date="d",###}</span><span>{$new.publishtime|date="Y-m",###}</span></time> 
+           <h4 class="news_title"><a href={$new.url}>{$new.title}</a></h4> 
+           <div class="news_info">
+            {$new.description}
+           </div> 
+           <a href="{$new.url}" class="news_more">more&gt;&gt;</a>
+          </figure> 
+         </div> 
+         {/cms:arclist}
        </div> 
       </div> 
      </section> 
