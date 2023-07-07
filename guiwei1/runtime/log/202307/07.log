@@ -29589,3 +29589,1599 @@
   'demo' => 'top_pd01.jpg',
 )
 [ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2023-07-07T17:34:21+08:00 ] 127.0.0.1 GET guiwei1234.com/News.html
+[运行时间：0.021071s] [吞吐率：47.46req/s] [内存消耗：611.92kb] [文件加载：154]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000031s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @app_init [ RunTime:0.000348s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000370s ]
+[ info ] [ LANG ] /Users/pan.liu/Documents/privateProject/guiwei/guiwei1/thinkphp/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000044s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\addons\\Route',
+    1 => 'execute',
+  ),
+  'var' => 
+  array (
+    'addon' => 'cms',
+    'controller' => 'channel',
+    'action' => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=utsisbr6sdek9l1okh6q1dq6h5; think_var=zh-cn',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://guiwei1234.com/Testproductcategory4/Test-product-070504.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'guiwei1234.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'diyname' => 'News',
+)
+[ info ] [ RUN ] think\addons\Route->execute[ /Users/pan.liu/Documents/privateProject/guiwei/guiwei1/vendor/karsonzhang/fastadmin-addons/src/addons/Route.php ]
+[ info ] [ LANG ] /Users/pan.liu/Documents/privateProject/guiwei/guiwei1/public/../application/common/lang/zh-cn/addon.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @addon_begin [ RunTime:0.000184s ]
+[ info ] [ LANG ] /Users/pan.liu/Documents/privateProject/guiwei/guiwei1/addons/cms/lang/zh-cn.php
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /Users/pan.liu/Documents/privateProject/guiwei/guiwei1/addons/cms/view/default1/list_News.html [ array (
+  0 => 'config',
+  1 => 'user',
+  2 => 'site',
+  3 => '__CHANNEL__',
+  4 => '__FILTERLIST__',
+  5 => '__ORDERLIST__',
+  6 => '__PAGELIST__',
+) ]
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @view_filter [ RunTime:0.000041s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2023-07-07T17:34:27+08:00 ] 127.0.0.1 GET guiwei1234.com/Testproductcategory4/images/top_pd01.jpg
+[运行时间：0.005878s] [吞吐率：170.13req/s] [内存消耗：122.16kb] [文件加载：119]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000028s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @app_init [ RunTime:0.000263s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000278s ]
+[ info ] [ LANG ] /Users/pan.liu/Documents/privateProject/guiwei/guiwei1/thinkphp/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000054s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'Testproductcategory4',
+    1 => 'images',
+    2 => 'top_pd01.jpg',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=utsisbr6sdek9l1okh6q1dq6h5; think_var=zh-cn',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://guiwei1234.com/Testproductcategory4/Test-product-070504.html',
+  'accept' => 'image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'guiwei1234.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2023-07-07T17:34:27+08:00 ] 127.0.0.1 GET guiwei1234.com/Testproductcategory4/template/img/demo/top_pd01.jpg
+[运行时间：0.005444s] [吞吐率：183.69req/s] [内存消耗：122.66kb] [文件加载：119]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000039s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @app_init [ RunTime:0.000428s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000444s ]
+[ info ] [ LANG ] /Users/pan.liu/Documents/privateProject/guiwei/guiwei1/thinkphp/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000031s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'Testproductcategory4',
+    1 => 'template',
+    2 => 'img',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=utsisbr6sdek9l1okh6q1dq6h5; think_var=zh-cn',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://guiwei1234.com/Testproductcategory4/Test-product-070504.html',
+  'accept' => 'image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'guiwei1234.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'demo' => 'top_pd01.jpg',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2023-07-07T17:35:26+08:00 ] 127.0.0.1 GET guiwei1234.com/News.html
+[运行时间：0.011235s] [吞吐率：89.01req/s] [内存消耗：579.08kb] [文件加载：152]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000013s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @app_init [ RunTime:0.000148s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000160s ]
+[ info ] [ LANG ] /Users/pan.liu/Documents/privateProject/guiwei/guiwei1/thinkphp/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000026s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\addons\\Route',
+    1 => 'execute',
+  ),
+  'var' => 
+  array (
+    'addon' => 'cms',
+    'controller' => 'channel',
+    'action' => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=utsisbr6sdek9l1okh6q1dq6h5; think_var=zh-cn',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://guiwei1234.com/Testproductcategory4/Test-product-070504.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'guiwei1234.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'diyname' => 'News',
+)
+[ info ] [ RUN ] think\addons\Route->execute[ /Users/pan.liu/Documents/privateProject/guiwei/guiwei1/vendor/karsonzhang/fastadmin-addons/src/addons/Route.php ]
+[ info ] [ LANG ] /Users/pan.liu/Documents/privateProject/guiwei/guiwei1/public/../application/common/lang/zh-cn/addon.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @addon_begin [ RunTime:0.000078s ]
+[ info ] [ LANG ] /Users/pan.liu/Documents/privateProject/guiwei/guiwei1/addons/cms/lang/zh-cn.php
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /Users/pan.liu/Documents/privateProject/guiwei/guiwei1/addons/cms/view/default1/list_News.html [ array (
+  0 => 'config',
+  1 => 'user',
+  2 => 'site',
+  3 => '__CHANNEL__',
+  4 => '__FILTERLIST__',
+  5 => '__ORDERLIST__',
+  6 => '__PAGELIST__',
+) ]
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @view_filter [ RunTime:0.000028s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2023-07-07T17:35:29+08:00 ] 127.0.0.1 GET guiwei1234.com/News.html
+[运行时间：0.011931s] [吞吐率：83.82req/s] [内存消耗：578.81kb] [文件加载：152]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000010s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @app_init [ RunTime:0.000155s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000166s ]
+[ info ] [ LANG ] /Users/pan.liu/Documents/privateProject/guiwei/guiwei1/thinkphp/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000027s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\addons\\Route',
+    1 => 'execute',
+  ),
+  'var' => 
+  array (
+    'addon' => 'cms',
+    'controller' => 'channel',
+    'action' => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=utsisbr6sdek9l1okh6q1dq6h5; think_var=zh-cn',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://guiwei1234.com/Testproductcategory4/Test-product-070504.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'guiwei1234.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'diyname' => 'News',
+)
+[ info ] [ RUN ] think\addons\Route->execute[ /Users/pan.liu/Documents/privateProject/guiwei/guiwei1/vendor/karsonzhang/fastadmin-addons/src/addons/Route.php ]
+[ info ] [ LANG ] /Users/pan.liu/Documents/privateProject/guiwei/guiwei1/public/../application/common/lang/zh-cn/addon.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @addon_begin [ RunTime:0.000149s ]
+[ info ] [ LANG ] /Users/pan.liu/Documents/privateProject/guiwei/guiwei1/addons/cms/lang/zh-cn.php
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /Users/pan.liu/Documents/privateProject/guiwei/guiwei1/addons/cms/view/default1/list_News.html [ array (
+  0 => 'config',
+  1 => 'user',
+  2 => 'site',
+  3 => '__CHANNEL__',
+  4 => '__FILTERLIST__',
+  5 => '__ORDERLIST__',
+  6 => '__PAGELIST__',
+) ]
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @view_filter [ RunTime:0.000027s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2023-07-07T17:35:31+08:00 ] 127.0.0.1 GET guiwei1234.com/Testproductcategory4/images/top_pd01.jpg
+[运行时间：0.001680s] [吞吐率：595.19req/s] [内存消耗：122.16kb] [文件加载：119]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000017s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @app_init [ RunTime:0.000118s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000129s ]
+[ info ] [ LANG ] /Users/pan.liu/Documents/privateProject/guiwei/guiwei1/thinkphp/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000022s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'Testproductcategory4',
+    1 => 'images',
+    2 => 'top_pd01.jpg',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=utsisbr6sdek9l1okh6q1dq6h5; think_var=zh-cn',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://guiwei1234.com/Testproductcategory4/Test-product-070504.html',
+  'accept' => 'image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'guiwei1234.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2023-07-07T17:35:31+08:00 ] 127.0.0.1 GET guiwei1234.com/Testproductcategory4/template/img/demo/top_pd01.jpg
+[运行时间：0.001768s] [吞吐率：565.57req/s] [内存消耗：122.66kb] [文件加载：119]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000009s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @app_init [ RunTime:0.000117s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000128s ]
+[ info ] [ LANG ] /Users/pan.liu/Documents/privateProject/guiwei/guiwei1/thinkphp/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000022s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'Testproductcategory4',
+    1 => 'template',
+    2 => 'img',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=utsisbr6sdek9l1okh6q1dq6h5; think_var=zh-cn',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://guiwei1234.com/Testproductcategory4/Test-product-070504.html',
+  'accept' => 'image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'guiwei1234.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'demo' => 'top_pd01.jpg',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2023-07-07T17:35:55+08:00 ] 127.0.0.1 GET guiwei1234.com/News.html
+[运行时间：0.031164s] [吞吐率：32.09req/s] [内存消耗：758.08kb] [文件加载：157]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000012s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @app_init [ RunTime:0.000153s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000166s ]
+[ info ] [ LANG ] /Users/pan.liu/Documents/privateProject/guiwei/guiwei1/thinkphp/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000027s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\addons\\Route',
+    1 => 'execute',
+  ),
+  'var' => 
+  array (
+    'addon' => 'cms',
+    'controller' => 'channel',
+    'action' => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=utsisbr6sdek9l1okh6q1dq6h5; think_var=zh-cn',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://guiwei1234.com/Testproductcategory4/Test-product-070504.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'guiwei1234.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'diyname' => 'News',
+)
+[ info ] [ RUN ] think\addons\Route->execute[ /Users/pan.liu/Documents/privateProject/guiwei/guiwei1/vendor/karsonzhang/fastadmin-addons/src/addons/Route.php ]
+[ info ] [ LANG ] /Users/pan.liu/Documents/privateProject/guiwei/guiwei1/public/../application/common/lang/zh-cn/addon.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @addon_begin [ RunTime:0.000084s ]
+[ info ] [ LANG ] /Users/pan.liu/Documents/privateProject/guiwei/guiwei1/addons/cms/lang/zh-cn.php
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /Users/pan.liu/Documents/privateProject/guiwei/guiwei1/addons/cms/view/default1/list_News.html [ array (
+  0 => 'config',
+  1 => 'user',
+  2 => 'site',
+  3 => '__CHANNEL__',
+  4 => '__FILTERLIST__',
+  5 => '__ORDERLIST__',
+  6 => '__PAGELIST__',
+) ]
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @view_filter [ RunTime:0.000043s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2023-07-07T17:35:56+08:00 ] 127.0.0.1 GET guiwei1234.com/template/default/images/Roboto-Bold.ttf
+[运行时间：0.006593s] [吞吐率：151.68req/s] [内存消耗：121.86kb] [文件加载：119]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000009s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @app_init [ RunTime:0.000155s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000167s ]
+[ info ] [ LANG ] /Users/pan.liu/Documents/privateProject/guiwei/guiwei1/thinkphp/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000049s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'template',
+    1 => 'default',
+    2 => 'images',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=utsisbr6sdek9l1okh6q1dq6h5; think_var=zh-cn',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://guiwei1234.com/template/default/css/style.css?v=1688722555',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',
+  'origin' => 'http://guiwei1234.com',
+  'connection' => 'keep-alive',
+  'host' => 'guiwei1234.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2023-07-07T17:35:56+08:00 ] 127.0.0.1 GET guiwei1234.com/template/default/images/Roboto-Regular.ttf
+[运行时间：0.006743s] [吞吐率：148.30req/s] [内存消耗：121.88kb] [文件加载：119]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000010s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @app_init [ RunTime:0.000138s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000152s ]
+[ info ] [ LANG ] /Users/pan.liu/Documents/privateProject/guiwei/guiwei1/thinkphp/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000022s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'template',
+    1 => 'default',
+    2 => 'images',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=utsisbr6sdek9l1okh6q1dq6h5; think_var=zh-cn',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://guiwei1234.com/template/default/css/style.css?v=1688722555',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',
+  'origin' => 'http://guiwei1234.com',
+  'connection' => 'keep-alive',
+  'host' => 'guiwei1234.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2023-07-07T17:36:24+08:00 ] 127.0.0.1 GET guiwei1234.com/News.html
+[运行时间：0.027874s] [吞吐率：35.88req/s] [内存消耗：649.88kb] [文件加载：153]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000011s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @app_init [ RunTime:0.000146s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000156s ]
+[ info ] [ LANG ] /Users/pan.liu/Documents/privateProject/guiwei/guiwei1/thinkphp/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000025s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\addons\\Route',
+    1 => 'execute',
+  ),
+  'var' => 
+  array (
+    'addon' => 'cms',
+    'controller' => 'channel',
+    'action' => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=utsisbr6sdek9l1okh6q1dq6h5; think_var=zh-cn',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://guiwei1234.com/News.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'guiwei1234.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'diyname' => 'News',
+)
+[ info ] [ RUN ] think\addons\Route->execute[ /Users/pan.liu/Documents/privateProject/guiwei/guiwei1/vendor/karsonzhang/fastadmin-addons/src/addons/Route.php ]
+[ info ] [ LANG ] /Users/pan.liu/Documents/privateProject/guiwei/guiwei1/public/../application/common/lang/zh-cn/addon.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @addon_begin [ RunTime:0.000077s ]
+[ info ] [ LANG ] /Users/pan.liu/Documents/privateProject/guiwei/guiwei1/addons/cms/lang/zh-cn.php
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /Users/pan.liu/Documents/privateProject/guiwei/guiwei1/addons/cms/view/default1/list_News.html [ array (
+  0 => 'config',
+  1 => 'user',
+  2 => 'site',
+  3 => '__CHANNEL__',
+  4 => '__FILTERLIST__',
+  5 => '__ORDERLIST__',
+  6 => '__PAGELIST__',
+) ]
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @view_filter [ RunTime:0.000040s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2023-07-07T17:36:24+08:00 ] 127.0.0.1 GET guiwei1234.com/template/default/images/Roboto-Bold.ttf
+[运行时间：0.002333s] [吞吐率：428.65req/s] [内存消耗：121.86kb] [文件加载：119]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000011s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @app_init [ RunTime:0.000212s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000224s ]
+[ info ] [ LANG ] /Users/pan.liu/Documents/privateProject/guiwei/guiwei1/thinkphp/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000022s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'template',
+    1 => 'default',
+    2 => 'images',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=utsisbr6sdek9l1okh6q1dq6h5; think_var=zh-cn',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://guiwei1234.com/template/default/css/style.css?v=1688722584',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',
+  'origin' => 'http://guiwei1234.com',
+  'connection' => 'keep-alive',
+  'host' => 'guiwei1234.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2023-07-07T17:36:24+08:00 ] 127.0.0.1 GET guiwei1234.com/template/default/images/Roboto-Regular.ttf
+[运行时间：0.003306s] [吞吐率：302.47req/s] [内存消耗：121.88kb] [文件加载：119]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000011s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @app_init [ RunTime:0.000119s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000130s ]
+[ info ] [ LANG ] /Users/pan.liu/Documents/privateProject/guiwei/guiwei1/thinkphp/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000024s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'template',
+    1 => 'default',
+    2 => 'images',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=utsisbr6sdek9l1okh6q1dq6h5; think_var=zh-cn',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://guiwei1234.com/template/default/css/style.css?v=1688722584',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',
+  'origin' => 'http://guiwei1234.com',
+  'connection' => 'keep-alive',
+  'host' => 'guiwei1234.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2023-07-07T17:44:13+08:00 ] 127.0.0.1 GET guiwei1234.com/Contact-us.html
+[运行时间：0.021708s] [吞吐率：46.07req/s] [内存消耗：696.56kb] [文件加载：159]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000010s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @app_init [ RunTime:0.000193s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000203s ]
+[ info ] [ LANG ] /Users/pan.liu/Documents/privateProject/guiwei/guiwei1/thinkphp/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000040s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\addons\\Route',
+    1 => 'execute',
+  ),
+  'var' => 
+  array (
+    'addon' => 'cms',
+    'controller' => 'channel',
+    'action' => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=utsisbr6sdek9l1okh6q1dq6h5; think_var=zh-cn',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://guiwei1234.com/News.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'guiwei1234.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'diyname' => 'Contact-us',
+)
+[ info ] [ RUN ] think\addons\Route->execute[ /Users/pan.liu/Documents/privateProject/guiwei/guiwei1/vendor/karsonzhang/fastadmin-addons/src/addons/Route.php ]
+[ info ] [ LANG ] /Users/pan.liu/Documents/privateProject/guiwei/guiwei1/public/../application/common/lang/zh-cn/addon.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @addon_begin [ RunTime:0.000119s ]
+[ info ] [ LANG ] /Users/pan.liu/Documents/privateProject/guiwei/guiwei1/addons/cms/lang/zh-cn.php
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /Users/pan.liu/Documents/privateProject/guiwei/guiwei1/addons/cms/view/default1/channel_contact.html [ array (
+  0 => 'config',
+  1 => 'user',
+  2 => 'site',
+  3 => '__CHANNEL__',
+  4 => '__FILTERLIST__',
+  5 => '__ORDERLIST__',
+  6 => '__PAGELIST__',
+) ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @view_filter [ RunTime:0.000027s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2023-07-07T17:44:18+08:00 ] 127.0.0.1 GET guiwei1234.com/about.html
+[运行时间：0.034460s] [吞吐率：29.02req/s] [内存消耗：724.50kb] [文件加载：157]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000011s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @app_init [ RunTime:0.000209s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000221s ]
+[ info ] [ LANG ] /Users/pan.liu/Documents/privateProject/guiwei/guiwei1/thinkphp/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000044s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\addons\\Route',
+    1 => 'execute',
+  ),
+  'var' => 
+  array (
+    'addon' => 'cms',
+    'controller' => 'channel',
+    'action' => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=utsisbr6sdek9l1okh6q1dq6h5; think_var=zh-cn',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://guiwei1234.com/News.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'guiwei1234.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'diyname' => 'about',
+)
+[ info ] [ RUN ] think\addons\Route->execute[ /Users/pan.liu/Documents/privateProject/guiwei/guiwei1/vendor/karsonzhang/fastadmin-addons/src/addons/Route.php ]
+[ info ] [ LANG ] /Users/pan.liu/Documents/privateProject/guiwei/guiwei1/public/../application/common/lang/zh-cn/addon.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @addon_begin [ RunTime:0.000113s ]
+[ info ] [ LANG ] /Users/pan.liu/Documents/privateProject/guiwei/guiwei1/addons/cms/lang/zh-cn.php
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /Users/pan.liu/Documents/privateProject/guiwei/guiwei1/addons/cms/view/default1/channel_about.html [ array (
+  0 => 'config',
+  1 => 'user',
+  2 => 'site',
+  3 => '__CHANNEL__',
+  4 => '__FILTERLIST__',
+  5 => '__ORDERLIST__',
+  6 => '__PAGELIST__',
+) ]
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @view_filter [ RunTime:0.000034s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2023-07-07T17:44:18+08:00 ] 127.0.0.1 GET guiwei1234.com/template/default/images/Roboto-Regular.ttf
+[运行时间：0.003681s] [吞吐率：271.67req/s] [内存消耗：121.88kb] [文件加载：119]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000011s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @app_init [ RunTime:0.000487s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000519s ]
+[ info ] [ LANG ] /Users/pan.liu/Documents/privateProject/guiwei/guiwei1/thinkphp/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000032s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'template',
+    1 => 'default',
+    2 => 'images',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=utsisbr6sdek9l1okh6q1dq6h5; think_var=zh-cn',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://guiwei1234.com/template/default/css/style.css?v=1688723058',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',
+  'origin' => 'http://guiwei1234.com',
+  'connection' => 'keep-alive',
+  'host' => 'guiwei1234.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2023-07-07T17:45:03+08:00 ] 127.0.0.1 GET guiwei1234.com/about.html
+[运行时间：0.019470s] [吞吐率：51.36req/s] [内存消耗：625.89kb] [文件加载：153]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000010s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @app_init [ RunTime:0.000138s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000149s ]
+[ info ] [ LANG ] /Users/pan.liu/Documents/privateProject/guiwei/guiwei1/thinkphp/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000024s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\addons\\Route',
+    1 => 'execute',
+  ),
+  'var' => 
+  array (
+    'addon' => 'cms',
+    'controller' => 'channel',
+    'action' => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=utsisbr6sdek9l1okh6q1dq6h5; think_var=zh-cn',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://guiwei1234.com/News.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'guiwei1234.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'diyname' => 'about',
+)
+[ info ] [ RUN ] think\addons\Route->execute[ /Users/pan.liu/Documents/privateProject/guiwei/guiwei1/vendor/karsonzhang/fastadmin-addons/src/addons/Route.php ]
+[ info ] [ LANG ] /Users/pan.liu/Documents/privateProject/guiwei/guiwei1/public/../application/common/lang/zh-cn/addon.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @addon_begin [ RunTime:0.000076s ]
+[ info ] [ LANG ] /Users/pan.liu/Documents/privateProject/guiwei/guiwei1/addons/cms/lang/zh-cn.php
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /Users/pan.liu/Documents/privateProject/guiwei/guiwei1/addons/cms/view/default1/channel_about.html [ array (
+  0 => 'config',
+  1 => 'user',
+  2 => 'site',
+  3 => '__CHANNEL__',
+  4 => '__FILTERLIST__',
+  5 => '__ORDERLIST__',
+  6 => '__PAGELIST__',
+) ]
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @view_filter [ RunTime:0.000062s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2023-07-07T17:45:03+08:00 ] 127.0.0.1 GET guiwei1234.com/template/default/images/Roboto-Regular.ttf
+[运行时间：0.006258s] [吞吐率：159.80req/s] [内存消耗：121.88kb] [文件加载：119]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000012s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @app_init [ RunTime:0.000942s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000959s ]
+[ info ] [ LANG ] /Users/pan.liu/Documents/privateProject/guiwei/guiwei1/thinkphp/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000025s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'template',
+    1 => 'default',
+    2 => 'images',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=utsisbr6sdek9l1okh6q1dq6h5; think_var=zh-cn',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://guiwei1234.com/template/default/css/style.css?v=1688723103',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',
+  'origin' => 'http://guiwei1234.com',
+  'connection' => 'keep-alive',
+  'host' => 'guiwei1234.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2023-07-07T17:45:04+08:00 ] 127.0.0.1 GET guiwei1234.com/Contact-us.html
+[运行时间：0.021386s] [吞吐率：46.76req/s] [内存消耗：710.33kb] [文件加载：157]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000023s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @app_init [ RunTime:0.000121s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000133s ]
+[ info ] [ LANG ] /Users/pan.liu/Documents/privateProject/guiwei/guiwei1/thinkphp/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000020s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\addons\\Route',
+    1 => 'execute',
+  ),
+  'var' => 
+  array (
+    'addon' => 'cms',
+    'controller' => 'channel',
+    'action' => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=utsisbr6sdek9l1okh6q1dq6h5; think_var=zh-cn',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://guiwei1234.com/about.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'guiwei1234.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'diyname' => 'Contact-us',
+)
+[ info ] [ RUN ] think\addons\Route->execute[ /Users/pan.liu/Documents/privateProject/guiwei/guiwei1/vendor/karsonzhang/fastadmin-addons/src/addons/Route.php ]
+[ info ] [ LANG ] /Users/pan.liu/Documents/privateProject/guiwei/guiwei1/public/../application/common/lang/zh-cn/addon.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @addon_begin [ RunTime:0.000070s ]
+[ info ] [ LANG ] /Users/pan.liu/Documents/privateProject/guiwei/guiwei1/addons/cms/lang/zh-cn.php
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /Users/pan.liu/Documents/privateProject/guiwei/guiwei1/addons/cms/view/default1/channel_contact.html [ array (
+  0 => 'config',
+  1 => 'user',
+  2 => 'site',
+  3 => '__CHANNEL__',
+  4 => '__FILTERLIST__',
+  5 => '__ORDERLIST__',
+  6 => '__PAGELIST__',
+) ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @view_filter [ RunTime:0.000036s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2023-07-07T17:45:04+08:00 ] 127.0.0.1 GET guiwei1234.com/template/default/images/Roboto-Regular.ttf
+[运行时间：0.008789s] [吞吐率：113.78req/s] [内存消耗：121.88kb] [文件加载：119]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000014s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @app_init [ RunTime:0.000207s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000225s ]
+[ info ] [ LANG ] /Users/pan.liu/Documents/privateProject/guiwei/guiwei1/thinkphp/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000025s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'template',
+    1 => 'default',
+    2 => 'images',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=utsisbr6sdek9l1okh6q1dq6h5; think_var=zh-cn',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://guiwei1234.com/template/default/css/style.css?v=1688723104',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',
+  'origin' => 'http://guiwei1234.com',
+  'connection' => 'keep-alive',
+  'host' => 'guiwei1234.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2023-07-07T17:45:23+08:00 ] 127.0.0.1 GET guiwei1234.com/Contact-us.html
+[运行时间：0.020340s] [吞吐率：49.16req/s] [内存消耗：692.98kb] [文件加载：157]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000009s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @app_init [ RunTime:0.000144s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000154s ]
+[ info ] [ LANG ] /Users/pan.liu/Documents/privateProject/guiwei/guiwei1/thinkphp/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000024s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\addons\\Route',
+    1 => 'execute',
+  ),
+  'var' => 
+  array (
+    'addon' => 'cms',
+    'controller' => 'channel',
+    'action' => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=utsisbr6sdek9l1okh6q1dq6h5; think_var=zh-cn',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://guiwei1234.com/about.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'guiwei1234.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'diyname' => 'Contact-us',
+)
+[ info ] [ RUN ] think\addons\Route->execute[ /Users/pan.liu/Documents/privateProject/guiwei/guiwei1/vendor/karsonzhang/fastadmin-addons/src/addons/Route.php ]
+[ info ] [ LANG ] /Users/pan.liu/Documents/privateProject/guiwei/guiwei1/public/../application/common/lang/zh-cn/addon.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @addon_begin [ RunTime:0.000078s ]
+[ info ] [ LANG ] /Users/pan.liu/Documents/privateProject/guiwei/guiwei1/addons/cms/lang/zh-cn.php
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /Users/pan.liu/Documents/privateProject/guiwei/guiwei1/addons/cms/view/default1/channel_contact.html [ array (
+  0 => 'config',
+  1 => 'user',
+  2 => 'site',
+  3 => '__CHANNEL__',
+  4 => '__FILTERLIST__',
+  5 => '__ORDERLIST__',
+  6 => '__PAGELIST__',
+) ]
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @view_filter [ RunTime:0.000034s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2023-07-07T17:45:23+08:00 ] 127.0.0.1 GET guiwei1234.com/template/default/images/Roboto-Regular.ttf
+[运行时间：0.001908s] [吞吐率：524.09req/s] [内存消耗：121.88kb] [文件加载：119]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000010s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @app_init [ RunTime:0.000201s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000215s ]
+[ info ] [ LANG ] /Users/pan.liu/Documents/privateProject/guiwei/guiwei1/thinkphp/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000025s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'template',
+    1 => 'default',
+    2 => 'images',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=utsisbr6sdek9l1okh6q1dq6h5; think_var=zh-cn',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://guiwei1234.com/template/default/css/style.css?v=1688723123',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',
+  'origin' => 'http://guiwei1234.com',
+  'connection' => 'keep-alive',
+  'host' => 'guiwei1234.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2023-07-07T17:45:39+08:00 ] 127.0.0.1 GET guiwei1234.com/Contact-us.html
+[运行时间：0.016099s] [吞吐率：62.12req/s] [内存消耗：597.44kb] [文件加载：153]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000009s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @app_init [ RunTime:0.000138s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000148s ]
+[ info ] [ LANG ] /Users/pan.liu/Documents/privateProject/guiwei/guiwei1/thinkphp/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000025s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\addons\\Route',
+    1 => 'execute',
+  ),
+  'var' => 
+  array (
+    'addon' => 'cms',
+    'controller' => 'channel',
+    'action' => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=utsisbr6sdek9l1okh6q1dq6h5; think_var=zh-cn',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://guiwei1234.com/about.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'guiwei1234.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'diyname' => 'Contact-us',
+)
+[ info ] [ RUN ] think\addons\Route->execute[ /Users/pan.liu/Documents/privateProject/guiwei/guiwei1/vendor/karsonzhang/fastadmin-addons/src/addons/Route.php ]
+[ info ] [ LANG ] /Users/pan.liu/Documents/privateProject/guiwei/guiwei1/public/../application/common/lang/zh-cn/addon.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @addon_begin [ RunTime:0.000075s ]
+[ info ] [ LANG ] /Users/pan.liu/Documents/privateProject/guiwei/guiwei1/addons/cms/lang/zh-cn.php
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /Users/pan.liu/Documents/privateProject/guiwei/guiwei1/addons/cms/view/default1/channel_contact.html [ array (
+  0 => 'config',
+  1 => 'user',
+  2 => 'site',
+  3 => '__CHANNEL__',
+  4 => '__FILTERLIST__',
+  5 => '__ORDERLIST__',
+  6 => '__PAGELIST__',
+) ]
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @view_filter [ RunTime:0.000032s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2023-07-07T17:45:39+08:00 ] 127.0.0.1 GET guiwei1234.com/template/default/images/Roboto-Regular.ttf
+[运行时间：0.002745s] [吞吐率：364.28req/s] [内存消耗：121.88kb] [文件加载：119]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000010s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @app_init [ RunTime:0.000155s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000168s ]
+[ info ] [ LANG ] /Users/pan.liu/Documents/privateProject/guiwei/guiwei1/thinkphp/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000022s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'template',
+    1 => 'default',
+    2 => 'images',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=utsisbr6sdek9l1okh6q1dq6h5; think_var=zh-cn',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://guiwei1234.com/template/default/css/style.css?v=1688723139',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',
+  'origin' => 'http://guiwei1234.com',
+  'connection' => 'keep-alive',
+  'host' => 'guiwei1234.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2023-07-07T17:45:46+08:00 ] 127.0.0.1 GET guiwei1234.com/Contact-us.html
+[运行时间：0.021269s] [吞吐率：47.02req/s] [内存消耗：710.48kb] [文件加载：157]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000012s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @app_init [ RunTime:0.000235s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000249s ]
+[ info ] [ LANG ] /Users/pan.liu/Documents/privateProject/guiwei/guiwei1/thinkphp/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000045s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\addons\\Route',
+    1 => 'execute',
+  ),
+  'var' => 
+  array (
+    'addon' => 'cms',
+    'controller' => 'channel',
+    'action' => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=utsisbr6sdek9l1okh6q1dq6h5; think_var=zh-cn',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://guiwei1234.com/about.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'keep-alive',
+  'host' => 'guiwei1234.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'diyname' => 'Contact-us',
+)
+[ info ] [ RUN ] think\addons\Route->execute[ /Users/pan.liu/Documents/privateProject/guiwei/guiwei1/vendor/karsonzhang/fastadmin-addons/src/addons/Route.php ]
+[ info ] [ LANG ] /Users/pan.liu/Documents/privateProject/guiwei/guiwei1/public/../application/common/lang/zh-cn/addon.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @addon_begin [ RunTime:0.000123s ]
+[ info ] [ LANG ] /Users/pan.liu/Documents/privateProject/guiwei/guiwei1/addons/cms/lang/zh-cn.php
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /Users/pan.liu/Documents/privateProject/guiwei/guiwei1/addons/cms/view/default1/channel_contact.html [ array (
+  0 => 'config',
+  1 => 'user',
+  2 => 'site',
+  3 => '__CHANNEL__',
+  4 => '__FILTERLIST__',
+  5 => '__ORDERLIST__',
+  6 => '__PAGELIST__',
+) ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @view_filter [ RunTime:0.000035s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2023-07-07T17:45:46+08:00 ] 127.0.0.1 GET guiwei1234.com/template/default/images/Roboto-Regular.ttf
+[运行时间：0.013645s] [吞吐率：73.29req/s] [内存消耗：122.52kb] [文件加载：119]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000012s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @app_init [ RunTime:0.000124s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000135s ]
+[ info ] [ LANG ] /Users/pan.liu/Documents/privateProject/guiwei/guiwei1/thinkphp/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000021s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'template',
+    1 => 'default',
+    2 => 'images',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=utsisbr6sdek9l1okh6q1dq6h5; think_var=zh-cn',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://guiwei1234.com/template/default/css/style.css?v=1688723146',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',
+  'origin' => 'http://guiwei1234.com',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'keep-alive',
+  'host' => 'guiwei1234.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2023-07-07T17:45:57+08:00 ] 127.0.0.1 GET guiwei1234.com/
+[运行时间：0.028322s] [吞吐率：35.31req/s] [内存消耗：592.82kb] [文件加载：149]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000023s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @app_init [ RunTime:0.000142s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000154s ]
+[ info ] [ LANG ] /Users/pan.liu/Documents/privateProject/guiwei/guiwei1/thinkphp/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000024s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\addons\\Route',
+    1 => 'execute',
+  ),
+  'var' => 
+  array (
+    'addon' => 'cms',
+    'controller' => 'index',
+    'action' => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=utsisbr6sdek9l1okh6q1dq6h5; think_var=zh-cn',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://guiwei1234.com/Contact-us.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'guiwei1234.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] think\addons\Route->execute[ /Users/pan.liu/Documents/privateProject/guiwei/guiwei1/vendor/karsonzhang/fastadmin-addons/src/addons/Route.php ]
+[ info ] [ LANG ] /Users/pan.liu/Documents/privateProject/guiwei/guiwei1/public/../application/common/lang/zh-cn/addon.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @addon_begin [ RunTime:0.000078s ]
+[ info ] [ LANG ] /Users/pan.liu/Documents/privateProject/guiwei/guiwei1/addons/cms/lang/zh-cn.php
+[ info ] [ VIEW ] /Users/pan.liu/Documents/privateProject/guiwei/guiwei1/addons/cms/view/default1/index.html [ array (
+  0 => 'config',
+  1 => 'user',
+  2 => 'site',
+  3 => '__CHANNEL__',
+) ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @view_filter [ RunTime:0.000044s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2023-07-07T17:45:57+08:00 ] 127.0.0.1 GET guiwei1234.com/template/default/images/Roboto-Thin.ttf
+[运行时间：0.015222s] [吞吐率：65.70req/s] [内存消耗：121.86kb] [文件加载：119]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000012s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @app_init [ RunTime:0.000174s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000189s ]
+[ info ] [ LANG ] /Users/pan.liu/Documents/privateProject/guiwei/guiwei1/thinkphp/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000197s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'template',
+    1 => 'default',
+    2 => 'images',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=utsisbr6sdek9l1okh6q1dq6h5; think_var=zh-cn',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://guiwei1234.com/template/default/css/style.css?v=1688723157',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',
+  'origin' => 'http://guiwei1234.com',
+  'connection' => 'keep-alive',
+  'host' => 'guiwei1234.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2023-07-07T17:45:57+08:00 ] 127.0.0.1 GET guiwei1234.com/template/default/images/Roboto-Bold.ttf
+[运行时间：0.015735s] [吞吐率：63.55req/s] [内存消耗：121.86kb] [文件加载：119]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000013s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @app_init [ RunTime:0.000449s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000463s ]
+[ info ] [ LANG ] /Users/pan.liu/Documents/privateProject/guiwei/guiwei1/thinkphp/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000025s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'template',
+    1 => 'default',
+    2 => 'images',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=utsisbr6sdek9l1okh6q1dq6h5; think_var=zh-cn',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://guiwei1234.com/template/default/css/style.css?v=1688723157',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',
+  'origin' => 'http://guiwei1234.com',
+  'connection' => 'keep-alive',
+  'host' => 'guiwei1234.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2023-07-07T17:45:57+08:00 ] 127.0.0.1 GET guiwei1234.com/template/default/images/Roboto-Regular.ttf
+[运行时间：0.016237s] [吞吐率：61.59req/s] [内存消耗：121.88kb] [文件加载：119]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000010s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @app_init [ RunTime:0.000273s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000290s ]
+[ info ] [ LANG ] /Users/pan.liu/Documents/privateProject/guiwei/guiwei1/thinkphp/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000023s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'template',
+    1 => 'default',
+    2 => 'images',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=utsisbr6sdek9l1okh6q1dq6h5; think_var=zh-cn',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://guiwei1234.com/template/default/css/style.css?v=1688723157',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',
+  'origin' => 'http://guiwei1234.com',
+  'connection' => 'keep-alive',
+  'host' => 'guiwei1234.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2023-07-07T17:45:57+08:00 ] 127.0.0.1 GET guiwei1234.com/template/default/images/Roboto-Black.ttf
+[运行时间：0.041369s] [吞吐率：24.17req/s] [内存消耗：121.88kb] [文件加载：119]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000014s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @app_init [ RunTime:0.002383s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.002411s ]
+[ info ] [ LANG ] /Users/pan.liu/Documents/privateProject/guiwei/guiwei1/thinkphp/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000065s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'template',
+    1 => 'default',
+    2 => 'images',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=utsisbr6sdek9l1okh6q1dq6h5; think_var=zh-cn',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://guiwei1234.com/template/default/css/style.css?v=1688723157',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',
+  'origin' => 'http://guiwei1234.com',
+  'connection' => 'keep-alive',
+  'host' => 'guiwei1234.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2023-07-07T17:45:58+08:00 ] 127.0.0.1 GET guiwei1234.com/Products.html
+[运行时间：0.027628s] [吞吐率：36.20req/s] [内存消耗：688.52kb] [文件加载：153]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000010s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @app_init [ RunTime:0.000117s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000128s ]
+[ info ] [ LANG ] /Users/pan.liu/Documents/privateProject/guiwei/guiwei1/thinkphp/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000020s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\addons\\Route',
+    1 => 'execute',
+  ),
+  'var' => 
+  array (
+    'addon' => 'cms',
+    'controller' => 'channel',
+    'action' => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=utsisbr6sdek9l1okh6q1dq6h5; think_var=zh-cn',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://guiwei1234.com/',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'guiwei1234.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'diyname' => 'Products',
+)
+[ info ] [ RUN ] think\addons\Route->execute[ /Users/pan.liu/Documents/privateProject/guiwei/guiwei1/vendor/karsonzhang/fastadmin-addons/src/addons/Route.php ]
+[ info ] [ LANG ] /Users/pan.liu/Documents/privateProject/guiwei/guiwei1/public/../application/common/lang/zh-cn/addon.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @addon_begin [ RunTime:0.000068s ]
+[ info ] [ LANG ] /Users/pan.liu/Documents/privateProject/guiwei/guiwei1/addons/cms/lang/zh-cn.php
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /Users/pan.liu/Documents/privateProject/guiwei/guiwei1/addons/cms/view/default1/list_product.html [ array (
+  0 => 'config',
+  1 => 'user',
+  2 => 'site',
+  3 => '__CHANNEL__',
+  4 => '__FILTERLIST__',
+  5 => '__ORDERLIST__',
+  6 => '__PAGELIST__',
+) ]
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @view_filter [ RunTime:0.000046s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2023-07-07T17:45:58+08:00 ] 127.0.0.1 GET guiwei1234.com/template/default/images/Roboto-Regular.ttf
+[运行时间：0.002071s] [吞吐率：482.83req/s] [内存消耗：121.88kb] [文件加载：119]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000012s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @app_init [ RunTime:0.000134s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000145s ]
+[ info ] [ LANG ] /Users/pan.liu/Documents/privateProject/guiwei/guiwei1/thinkphp/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000022s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'template',
+    1 => 'default',
+    2 => 'images',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=utsisbr6sdek9l1okh6q1dq6h5; think_var=zh-cn',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://guiwei1234.com/template/default/css/style.css?v=1688723158',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',
+  'origin' => 'http://guiwei1234.com',
+  'connection' => 'keep-alive',
+  'host' => 'guiwei1234.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2023-07-07T17:45:58+08:00 ] 127.0.0.1 GET guiwei1234.com/template/default/images/Roboto-Bold.ttf
+[运行时间：0.002071s] [吞吐率：482.83req/s] [内存消耗：121.86kb] [文件加载：119]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000012s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @app_init [ RunTime:0.000136s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000149s ]
+[ info ] [ LANG ] /Users/pan.liu/Documents/privateProject/guiwei/guiwei1/thinkphp/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000024s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'template',
+    1 => 'default',
+    2 => 'images',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=utsisbr6sdek9l1okh6q1dq6h5; think_var=zh-cn',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://guiwei1234.com/template/default/css/style.css?v=1688723158',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',
+  'origin' => 'http://guiwei1234.com',
+  'connection' => 'keep-alive',
+  'host' => 'guiwei1234.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2023-07-07T17:45:59+08:00 ] 127.0.0.1 GET guiwei1234.com/News.html
+[运行时间：0.025376s] [吞吐率：39.41req/s] [内存消耗：648.73kb] [文件加载：153]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000009s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @app_init [ RunTime:0.000180s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000243s ]
+[ info ] [ LANG ] /Users/pan.liu/Documents/privateProject/guiwei/guiwei1/thinkphp/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000035s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\addons\\Route',
+    1 => 'execute',
+  ),
+  'var' => 
+  array (
+    'addon' => 'cms',
+    'controller' => 'channel',
+    'action' => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=utsisbr6sdek9l1okh6q1dq6h5; think_var=zh-cn',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://guiwei1234.com/Products.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'guiwei1234.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'diyname' => 'News',
+)
+[ info ] [ RUN ] think\addons\Route->execute[ /Users/pan.liu/Documents/privateProject/guiwei/guiwei1/vendor/karsonzhang/fastadmin-addons/src/addons/Route.php ]
+[ info ] [ LANG ] /Users/pan.liu/Documents/privateProject/guiwei/guiwei1/public/../application/common/lang/zh-cn/addon.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @addon_begin [ RunTime:0.000078s ]
+[ info ] [ LANG ] /Users/pan.liu/Documents/privateProject/guiwei/guiwei1/addons/cms/lang/zh-cn.php
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /Users/pan.liu/Documents/privateProject/guiwei/guiwei1/addons/cms/view/default1/list_News.html [ array (
+  0 => 'config',
+  1 => 'user',
+  2 => 'site',
+  3 => '__CHANNEL__',
+  4 => '__FILTERLIST__',
+  5 => '__ORDERLIST__',
+  6 => '__PAGELIST__',
+) ]
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @view_filter [ RunTime:0.000040s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2023-07-07T17:45:59+08:00 ] 127.0.0.1 GET guiwei1234.com/template/default/images/Roboto-Bold.ttf
+[运行时间：0.001941s] [吞吐率：515.21req/s] [内存消耗：121.86kb] [文件加载：119]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000010s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @app_init [ RunTime:0.000130s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000142s ]
+[ info ] [ LANG ] /Users/pan.liu/Documents/privateProject/guiwei/guiwei1/thinkphp/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000032s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'template',
+    1 => 'default',
+    2 => 'images',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=utsisbr6sdek9l1okh6q1dq6h5; think_var=zh-cn',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://guiwei1234.com/template/default/css/style.css?v=1688723159',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',
+  'origin' => 'http://guiwei1234.com',
+  'connection' => 'keep-alive',
+  'host' => 'guiwei1234.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2023-07-07T17:45:59+08:00 ] 127.0.0.1 GET guiwei1234.com/template/default/images/Roboto-Regular.ttf
+[运行时间：0.002206s] [吞吐率：453.29req/s] [内存消耗：121.88kb] [文件加载：119]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000010s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \addons\cms\Cms @app_init [ RunTime:0.000133s ]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000144s ]
+[ info ] [ LANG ] /Users/pan.liu/Documents/privateProject/guiwei/guiwei1/thinkphp/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000045s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'template',
+    1 => 'default',
+    2 => 'images',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=utsisbr6sdek9l1okh6q1dq6h5; think_var=zh-cn',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://guiwei1234.com/template/default/css/style.css?v=1688723159',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',
+  'origin' => 'http://guiwei1234.com',
+  'connection' => 'keep-alive',
+  'host' => 'guiwei1234.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
