@@ -6,15 +6,14 @@
     </ul> 
     <div class="foot_bottom layout"> 
      <ul class="foot_contact wow fadeInUpA" data-wow-delay="1.3s" data-wow-duration=".8s"> 
-      <li class="foot_email"><a href="matial:">{$site.emaill}</a></li> 
+      <li class="foot_email"><a style="text-transform: lowercase;" href="mailto:{$site.email}">{$site.emaill}</a></li> 
       <li class="foot_address">Address:West of Yaodu Avenue, Tuojiang Town, Jianghua Yao Autonomous County, Yongzhou City, Hunan Province, P.R,China</li> 
-      <li class="foot_phone"><a href="tel:">Tel:{$site.tell}</a></li> 
+      <li class="foot_phone"><a href="tel:{site.tell}">Tel:{$site.tell}</a></li> 
      </ul> 
      <ul class="foot_sns wow fadeInUpA" data-wow-delay="1.5s" data-wow-duration=".8s"> 
-      <li><a href=""><img src="__CDN__/template/default/images/sns01.png" alt=""></a></li> 
-      <li><a href=""><img src="__CDN__/template/default/images/sns02.png" alt=""></a></li> 
-      <li><a href=""><img src="__CDN__/template/default/images/sns03.png" alt=""></a></li> 
-      <li><a href=""><img src="__CDN__/template/default/images/sns04.png" alt=""></a></li> 
+        {cms:blocklist id="block" name="media" orderby="weigh" orderway="asc" }
+            <li><a href="{$block.url}"><img src="{$block.image}" alt="{$block.title}"></a></li> 
+        {/cms:blocklist}
      </ul> 
      <div class="copyright wow fadeInUpA" data-wow-delay="1.7s" data-wow-duration=".8s">
       <!-- Copyright © 2019 
@@ -33,12 +32,15 @@
       <img src="__CDN__/template/default/images/title_pic.png" alt="">
      </header> 
      <div class="cont"> 
-      <li><a class="email" href="javascript:">Send Email</a></li> 
-      <li><a class="skype" href="">Skype Chat</a></li> 
-      <li><a class="inquiry" href="">Send Inquiry</a></li> 
+      <li><a class="email" href="mailto:{$site.email}">Send Email</a></li> 
+      <!-- <li><a class="skype" href="">Skype Chat</a></li>
+      <li><a class="inquiry" href="">Send Inquiry</a>  -->
      </div> 
      <div class="t-code">
-      <img src="__CDN__/template/default/images/t_code.png">
+    {cms:blocklist id="block" name="online-service" orderby="weigh" orderway="asc" }
+      <img src="{$block.image}">
+    {/cms:blocklist}
+      
      </div> 
      <div class="side_title">
       LiveChat

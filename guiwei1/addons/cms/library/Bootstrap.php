@@ -20,7 +20,7 @@ class Bootstrap extends Paginator
      * @param string $text
      * @return string
      */
-    protected function getPreviousButton($text = "<span><font class='page_noclick'><em class='icon_page_prev'></em>&nbsp;</font></span>")
+    protected function getPreviousButton($text = "&lt;&lt;")
     {
         if ($this->currentPage() <= 1) {
             return $this->getDisabledTextWrapper($text);
@@ -38,7 +38,7 @@ class Bootstrap extends Paginator
      * @param string $text
      * @return string
      */
-    protected function getNextButton($text = "<span class='page_last'><font class='page_noclick'>&nbsp;<em class='icon_page_next'></em></font></span>")
+    protected function getNextButton($text = "&gt;&gt;")
     {
         if (!$this->hasMore) {
             return $this->getDisabledTextWrapper($text);
@@ -138,12 +138,12 @@ class Bootstrap extends Paginator
         }
 
         if (is_array($block['slider'])) {
-            $html .= $this->getDots();
+            // $html .= $this->getDots();
             $html .= $this->getUrlLinks($block['slider']);
         }
 
         if (is_array($block['last'])) {
-            $html .= $this->getDots();
+            // $html .= $this->getDots();
             $html .= $this->getUrlLinks($block['last']);
         }
         return $html;
@@ -169,7 +169,7 @@ class Bootstrap extends Paginator
                 );
             } else {
                 return sprintf(
-                    '<div class="Pagination_list">%s %s %s</div>',
+                    '<div class="pages">%s %s %s</div>',
                     $this->getPreviousButton(),
                     $this->getLinks(),
                    // $this->getGoPage(),
@@ -195,7 +195,7 @@ class Bootstrap extends Paginator
      */
     protected function getAvailablePageWrapper($url, $page)
     {
-        return '<span><a href="' . htmlentities($url) . '">' . $page . '</a></span>';
+        return '<a href="' . htmlentities($url) . '">' . $page . '</a>';
     }
 
     /**
@@ -217,7 +217,7 @@ class Bootstrap extends Paginator
      */
     protected function getActivePageWrapper($text)
     {
-        return '<span> <font class="page_item_current">' . $text . '</font></span>';
+        return '<a class="current">' . $text . '</a>';
     }
 
     /**
