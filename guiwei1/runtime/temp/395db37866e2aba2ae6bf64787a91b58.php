@@ -1,11 +1,12 @@
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:99:"/Users/panliu/Documents/privateProject/guiwei/guiwei1/addons/cms/view/default1/channel_contact.html";i:1688917501;s:94:"/Users/panliu/Documents/privateProject/guiwei/guiwei1/addons/cms/view/default1/common/top.html";i:1688916874;s:95:"/Users/panliu/Documents/privateProject/guiwei/guiwei1/addons/cms/view/default1/common/foot.html";i:1688779705;}*/ ?>
 <!doctype html>
 <html>
  <head> 
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
   <title>index</title> 
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"> 
-  <link href="__CDN__/template/default/css/style.css?v={$site.version}" rel="stylesheet" type="text/css">
-  <link href="__CDN__/template/default/css/public.css?v={$site.version}" rel="stylesheet" type="text/css">
+  <link href="/template/default/css/style.css?v=<?php echo $site['version']; ?>" rel="stylesheet" type="text/css">
+  <link href="/template/default/css/public.css?v=<?php echo $site['version']; ?>" rel="stylesheet" type="text/css">
  </head> 
  <body> 
   <div class="container"> 
@@ -14,13 +15,13 @@
     <section class="top_bar"> 
      <div class="layout"> 
       <div class="head_phone">
-       <a href="">Phone:{$site.tell}</a>
+       <a href="">Phone:<?php echo $site['tell']; ?></a>
       </div> 
       <div class="head-search"> 
        <form class="" action="/Products.html" method="GET"> 
         <button class="search-btn"></button>
         <!-- <input class="search-btn" type="button" />  -->
-        <input class="search-ipt" type="text" name="title" {if !empty($v)}value="{$v}"{/if} placeholder="Search..." /> 
+        <input class="search-ipt" type="text" name="title" <?php if(!empty($v)): ?>value="<?php echo $v; ?>"<?php endif; ?> placeholder="Search..." /> 
        </form> 
 
       </div> 
@@ -28,31 +29,31 @@
     </section> 
     <div class="head_layout layout"> 
      <figure class="logo">
-        <a href="">{notempty name="$site.logo"}<img style="width: 150px; height: 42px;" src="{$site.logo}">{/notempty}</a>
-      <!-- <img src="__CDN__/template/default/images/logo.png" alt=""></a> -->
+        <a href=""><?php if(!(empty($site['logo']) || (($site['logo'] instanceof \think\Collection || $site['logo'] instanceof \think\Paginator ) && $site['logo']->isEmpty()))): ?><img style="width: 150px; height: 42px;" src="<?php echo $site['logo']; ?>"><?php endif; ?></a>
+      <!-- <img src="/template/default/images/logo.png" alt=""></a> -->
      </figure> 
      <nav class="nav_wrap"> 
       <ul class="head_nav"> 
-       {cms:channellist id="nav" type="top" cache="0" condition="1=isnav" row="20" orderby="weigh" orderway="desc"}
+       <?php $__XFnCqPatM5__ = \addons\cms\model\Channel::getChannelList(["id"=>"nav","type"=>"top","cache"=>"0","condition"=>"1=isnav","row"=>"20","orderby"=>"weigh","orderway"=>"desc"]); if(is_array($__XFnCqPatM5__) || $__XFnCqPatM5__ instanceof \think\Collection || $__XFnCqPatM5__ instanceof \think\Paginator): $i = 0; $__LIST__ = $__XFnCqPatM5__;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$nav): $mod = ($i % 2 );++$i;?>
         <li>
-            <a href="{$nav.url}">{$nav.name}</a>
-            {if $nav.has_child}
+            <a href="<?php echo $nav['url']; ?>"><?php echo $nav['name']; ?></a>
+            <?php if($nav['has_child']): ?>
                 <ul>
-                    {cms:channellist id="son" type="son" condition="1=isnav" typeid="nav['id']" cache="0" row="20"}
-                        <li><a href="{$son.url}">{$son.name}</a>
-                        {if $son.has_child}
+                    <?php $__dw3Q8K1vl0__ = \addons\cms\model\Channel::getChannelList(["id"=>"son","type"=>"son","condition"=>"1=isnav","typeid"=>$nav['id'],"cache"=>"0","row"=>"20"]); if(is_array($__dw3Q8K1vl0__) || $__dw3Q8K1vl0__ instanceof \think\Collection || $__dw3Q8K1vl0__ instanceof \think\Paginator): $i = 0; $__LIST__ = $__dw3Q8K1vl0__;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$son): $mod = ($i % 2 );++$i;?>
+                        <li><a href="<?php echo $son['url']; ?>"><?php echo $son['name']; ?></a>
+                        <?php if($son['has_child']): ?>
                             <ul>
-                            {cms:channellist id="sons" condition="1=isnav" type="son" typeid="son['id']" cache="0" }
-                                <li><a href="{$sons.url}">{$sons.name}</a></li>
-                            {/cms:channellist}
+                            <?php $__ie3L5vkGsY__ = \addons\cms\model\Channel::getChannelList(["id"=>"sons","condition"=>"1=isnav","type"=>"son","typeid"=>$son['id'],"cache"=>"0"]); if(is_array($__ie3L5vkGsY__) || $__ie3L5vkGsY__ instanceof \think\Collection || $__ie3L5vkGsY__ instanceof \think\Paginator): $i = 0; $__LIST__ = $__ie3L5vkGsY__;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$sons): $mod = ($i % 2 );++$i;?>
+                                <li><a href="<?php echo $sons['url']; ?>"><?php echo $sons['name']; ?></a></li>
+                            <?php endforeach; endif; else: echo "" ;endif; $__LASTLIST__=$__ie3L5vkGsY__; ?>
                             </ul> 
-                        {/if}
+                        <?php endif; ?>
                         </li>
-                    {/cms:channellist}
+                    <?php endforeach; endif; else: echo "" ;endif; $__LASTLIST__=$__dw3Q8K1vl0__; ?>
                 </ul>
-            {/if}
+            <?php endif; ?>
         </li>
-        {/cms:channellist}
+        <?php endforeach; endif; else: echo "" ;endif; $__LASTLIST__=$__XFnCqPatM5__; ?>
       </ul> 
       <!--change-language--> 
       <div class="change-language ensemble"> 
@@ -130,4 +131,120 @@
    <li class="language-flag language-flag-hr"> <a title="Hrvatski" href="javascript:;"> <b class="country-flag"></b> <span>Hrvatski</span> </a> </li> 
    <li class="language-flag language-flag-bg"> <a title="Български" href="javascript:;"> <b class="country-flag"></b> <span>Български</span> </a> </li> 
    <li class="language-flag language-flag-az"> <a title="Azerbaijani" href="javascript:;"> <b class="country-flag"></b> <span>Azerbaijani</span> </a> </li>  -->
-  </ul>
+  </ul> 
+<!--aifeedback v2 start -->
+<div class="crm-form">
+  <div class="create-form-wrap">
+    <div class="create-form-title" style="background:#0F74A5;">Contact Us</div>
+    <div class="create-form-inner">
+      <div class="create-form-ul">
+        <form class="contact-from" onsubmit="return $('.formPoint').show();" method="POST" action="/d/customer/post.html">
+          <input type="hidden" name="__diyname__" value="customer">
+          <?php echo token(); ?>
+              <div class="create-form-li">
+            <div class="create-form-input">
+              <label>Name<span style="color:#F00">*</span>:</label>
+              <input type="text" name="row[name]">
+            </div>
+          </div>
+<div class="create-form-li">
+            <div class="create-form-input">
+              <label>Country:</label>
+              <input type="text" name="row[country]">
+            </div>
+          </div>
+<div class="create-form-li">
+            <div class="create-form-input">
+              <label>Company:</label>
+              <input type="text" name="row[company]">
+            </div>
+          </div>
+<div class="create-form-li">
+            <div class="create-form-input">
+              <label>Email<span style="color:#F00">*</span>:</label>
+              <input type="text" name="row[email]">
+            </div>
+          </div>
+<div class="create-form-li">
+            <div class="create-form-input">
+              <label>Tel:</label>
+              <input type="text" name="row[telephone]">
+            </div>
+          </div>
+<div class="create-form-block create-form-li create-form-message">
+            <div class="create-form-textarea">
+              <label>Message<span style="color:#F00">*</span>:</label>
+              <textarea name="row[content]"></textarea>
+            </div>
+          </div>
+        </div>
+        <div class="create-form-block create-form-cen create-form-action">
+          <input type="hidden" class="cid" name="cid" value="381">
+          <button type="submit" class="create-form-submit" style="background:#0F74A5;">Submit</button>
+        </div>
+        </form>
+      </div>
+    </div>
+  </div>
+<footer class="web_footer"> 
+    <ul class="foot_nav wow fadeInUpA" data-wow-delay="1s" data-wow-duration=".8s"> 
+     <?php $__VUhsp8bJKu__ = \addons\cms\model\Channel::getChannelList(["id"=>"nav","type"=>"top","cache"=>"0","condition"=>"1=isnav","row"=>"20","orderby"=>"weigh","orderway"=>"desc"]); if(is_array($__VUhsp8bJKu__) || $__VUhsp8bJKu__ instanceof \think\Collection || $__VUhsp8bJKu__ instanceof \think\Paginator): $i = 0; $__LIST__ = $__VUhsp8bJKu__;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$nav): $mod = ($i % 2 );++$i;?>
+        <li><a href="<?php echo $nav['url']; ?>"><?php echo $nav['name']; ?></a> </li>
+     <?php endforeach; endif; else: echo "" ;endif; $__LASTLIST__=$__VUhsp8bJKu__; ?>
+    </ul> 
+    <div class="foot_bottom layout"> 
+     <ul class="foot_contact wow fadeInUpA" data-wow-delay="1.3s" data-wow-duration=".8s"> 
+      <li class="foot_email"><a style="text-transform: lowercase;" href="mailto:<?php echo $site['email']; ?>"><?php echo $site['emaill']; ?></a></li> 
+      <li class="foot_address">Address:West of Yaodu Avenue, Tuojiang Town, Jianghua Yao Autonomous County, Yongzhou City, Hunan Province, P.R,China</li> 
+      <li class="foot_phone"><a href="tel:{site.tell}">Tel:<?php echo $site['tell']; ?></a></li> 
+     </ul> 
+     <ul class="foot_sns wow fadeInUpA" data-wow-delay="1.5s" data-wow-duration=".8s"> 
+        <?php $__ytEl1s7IwJ__ = \addons\cms\model\Block::getBlockList(["id"=>"block","name"=>"media","orderby"=>"weigh","orderway"=>"asc"]); if(is_array($__ytEl1s7IwJ__) || $__ytEl1s7IwJ__ instanceof \think\Collection || $__ytEl1s7IwJ__ instanceof \think\Paginator): $i = 0; $__LIST__ = $__ytEl1s7IwJ__;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$block): $mod = ($i % 2 );++$i;?>
+            <li><a href="<?php echo $block['url']; ?>"><img src="<?php echo $block['image']; ?>" alt="<?php echo $block['title']; ?>"></a></li> 
+        <?php endforeach; endif; else: echo "" ;endif; $__LASTLIST__=$__ytEl1s7IwJ__; ?>
+     </ul> 
+     <div class="copyright wow fadeInUpA" data-wow-delay="1.7s" data-wow-duration=".8s">
+      <!-- Copyright © 2019 
+      <span class="txt_impt">Goodao.cn</span> All Rights Reserved -->
+      <?php echo $site['beian']; ?>
+     </div> 
+    </div> 
+   </footer> 
+   <!--// web_footer end --> 
+  </div> 
+  <!--// container end --> 
+  <aside class="scrollsidebar" id="scrollsidebar"> 
+   <section class="side_content"> 
+    <div class="side_list"> 
+     <header class="hd">
+      <img src="/template/default/images/title_pic.png" alt="">
+     </header> 
+     <div class="cont"> 
+      <li><a class="email" href="mailto:<?php echo $site['email']; ?>">Send Email</a></li> 
+      <!-- <li><a class="skype" href="">Skype Chat</a></li>
+      <li><a class="inquiry" href="">Send Inquiry</a>  -->
+     </div> 
+     <div class="t-code">
+    <?php $__4wRGd8OUMQ__ = \addons\cms\model\Block::getBlockList(["id"=>"block","name"=>"online-service","orderby"=>"weigh","orderway"=>"asc"]); if(is_array($__4wRGd8OUMQ__) || $__4wRGd8OUMQ__ instanceof \think\Collection || $__4wRGd8OUMQ__ instanceof \think\Paginator): $i = 0; $__LIST__ = $__4wRGd8OUMQ__;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$block): $mod = ($i % 2 );++$i;?>
+      <img src="<?php echo $block['image']; ?>">
+    <?php endforeach; endif; else: echo "" ;endif; $__LASTLIST__=$__4wRGd8OUMQ__; ?>
+      
+     </div> 
+     <div class="side_title">
+      LiveChat
+      <a class="close_btn"><span>关闭</span></a>
+     </div> 
+    </div> 
+   </section> 
+   <div class="show_btn"></div> 
+  </aside> 
+  <div class="inquiry-pop-bd"> 
+   <div class="inquiry-pop">
+    <i class="ico-close-pop" onclick="hideMsgPop();"></i> 
+    <!-- <script type="text/javascript" src="https://www.globalso.site/php/app.php?widget-init-inline.js"></script>--> 
+   </div> 
+  </div>
+  <script src="/template/default/js/jquery.min.js"></script> 
+  <script src="/template/default/js/common.js"></script> 
+ </body>
+</html> 
