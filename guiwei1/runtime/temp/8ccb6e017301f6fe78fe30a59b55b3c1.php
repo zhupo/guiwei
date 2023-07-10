@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:100:"/Users/pan.liu/Documents/privateProject/guiwei/guiwei1/addons/cms/view/default1/channel_contact.html";i:1688723145;s:95:"/Users/pan.liu/Documents/privateProject/guiwei/guiwei1/addons/cms/view/default1/common/top.html";i:1688612883;s:96:"/Users/pan.liu/Documents/privateProject/guiwei/guiwei1/addons/cms/view/default1/common/foot.html";i:1688698032;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:100:"/Users/pan.liu/Documents/privateProject/guiwei/guiwei1/addons/cms/view/default1/channel_contact.html";i:1688953387;s:95:"/Users/pan.liu/Documents/privateProject/guiwei/guiwei1/addons/cms/view/default1/common/top.html";i:1688953387;s:96:"/Users/pan.liu/Documents/privateProject/guiwei/guiwei1/addons/cms/view/default1/common/foot.html";i:1688698032;}*/ ?>
 <!doctype html>
 <html>
  <head> 
@@ -18,10 +18,12 @@
        <a href="">Phone:<?php echo $site['tell']; ?></a>
       </div> 
       <div class="head-search"> 
-       <form class="" action=""> 
-        <input class="search-btn" type="button"> 
-        <input class="search-ipt" name="search" placeholder="Search..."> 
+       <form class="" action="/Products.html" method="GET"> 
+        <button class="search-btn"></button>
+        <!-- <input class="search-btn" type="button" />  -->
+        <input class="search-ipt" type="text" name="title" <?php if(!empty($v)): ?>value="<?php echo $v; ?>"<?php endif; ?> placeholder="Search..." /> 
        </form> 
+
       </div> 
      </div> 
     </section> 
@@ -32,26 +34,26 @@
      </figure> 
      <nav class="nav_wrap"> 
       <ul class="head_nav"> 
-       <?php $__uBS6lbRDkq__ = \addons\cms\model\Channel::getChannelList(["id"=>"nav","type"=>"top","cache"=>"0","condition"=>"1=isnav","row"=>"20","orderby"=>"weigh","orderway"=>"desc"]); if(is_array($__uBS6lbRDkq__) || $__uBS6lbRDkq__ instanceof \think\Collection || $__uBS6lbRDkq__ instanceof \think\Paginator): $i = 0; $__LIST__ = $__uBS6lbRDkq__;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$nav): $mod = ($i % 2 );++$i;?>
+       <?php $__f6BxOcw2qj__ = \addons\cms\model\Channel::getChannelList(["id"=>"nav","type"=>"top","cache"=>"0","condition"=>"1=isnav","row"=>"20","orderby"=>"weigh","orderway"=>"desc"]); if(is_array($__f6BxOcw2qj__) || $__f6BxOcw2qj__ instanceof \think\Collection || $__f6BxOcw2qj__ instanceof \think\Paginator): $i = 0; $__LIST__ = $__f6BxOcw2qj__;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$nav): $mod = ($i % 2 );++$i;?>
         <li>
             <a href="<?php echo $nav['url']; ?>"><?php echo $nav['name']; ?></a>
             <?php if($nav['has_child']): ?>
                 <ul>
-                    <?php $__oQuwMmfbH9__ = \addons\cms\model\Channel::getChannelList(["id"=>"son","type"=>"son","condition"=>"1=isnav","typeid"=>$nav['id'],"cache"=>"0","row"=>"20"]); if(is_array($__oQuwMmfbH9__) || $__oQuwMmfbH9__ instanceof \think\Collection || $__oQuwMmfbH9__ instanceof \think\Paginator): $i = 0; $__LIST__ = $__oQuwMmfbH9__;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$son): $mod = ($i % 2 );++$i;?>
+                    <?php $__eAOEQ1lJg8__ = \addons\cms\model\Channel::getChannelList(["id"=>"son","type"=>"son","condition"=>"1=isnav","typeid"=>$nav['id'],"cache"=>"0","row"=>"20"]); if(is_array($__eAOEQ1lJg8__) || $__eAOEQ1lJg8__ instanceof \think\Collection || $__eAOEQ1lJg8__ instanceof \think\Paginator): $i = 0; $__LIST__ = $__eAOEQ1lJg8__;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$son): $mod = ($i % 2 );++$i;?>
                         <li><a href="<?php echo $son['url']; ?>"><?php echo $son['name']; ?></a>
                         <?php if($son['has_child']): ?>
                             <ul>
-                            <?php $__vVjRiKaTfs__ = \addons\cms\model\Channel::getChannelList(["id"=>"sons","condition"=>"1=isnav","type"=>"son","typeid"=>$son['id'],"cache"=>"0"]); if(is_array($__vVjRiKaTfs__) || $__vVjRiKaTfs__ instanceof \think\Collection || $__vVjRiKaTfs__ instanceof \think\Paginator): $i = 0; $__LIST__ = $__vVjRiKaTfs__;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$sons): $mod = ($i % 2 );++$i;?>
+                            <?php $__kYVsLlQx89__ = \addons\cms\model\Channel::getChannelList(["id"=>"sons","condition"=>"1=isnav","type"=>"son","typeid"=>$son['id'],"cache"=>"0"]); if(is_array($__kYVsLlQx89__) || $__kYVsLlQx89__ instanceof \think\Collection || $__kYVsLlQx89__ instanceof \think\Paginator): $i = 0; $__LIST__ = $__kYVsLlQx89__;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$sons): $mod = ($i % 2 );++$i;?>
                                 <li><a href="<?php echo $sons['url']; ?>"><?php echo $sons['name']; ?></a></li>
-                            <?php endforeach; endif; else: echo "" ;endif; $__LASTLIST__=$__vVjRiKaTfs__; ?>
+                            <?php endforeach; endif; else: echo "" ;endif; $__LASTLIST__=$__kYVsLlQx89__; ?>
                             </ul> 
                         <?php endif; ?>
                         </li>
-                    <?php endforeach; endif; else: echo "" ;endif; $__LASTLIST__=$__oQuwMmfbH9__; ?>
+                    <?php endforeach; endif; else: echo "" ;endif; $__LASTLIST__=$__eAOEQ1lJg8__; ?>
                 </ul>
             <?php endif; ?>
         </li>
-        <?php endforeach; endif; else: echo "" ;endif; $__LASTLIST__=$__uBS6lbRDkq__; ?>
+        <?php endforeach; endif; else: echo "" ;endif; $__LASTLIST__=$__f6BxOcw2qj__; ?>
       </ul> 
       <!--change-language--> 
       <div class="change-language ensemble"> 
@@ -130,86 +132,65 @@
    <li class="language-flag language-flag-bg"> <a title="Български" href="javascript:;"> <b class="country-flag"></b> <span>Български</span> </a> </li> 
    <li class="language-flag language-flag-az"> <a title="Azerbaijani" href="javascript:;"> <b class="country-flag"></b> <span>Azerbaijani</span> </a> </li>  -->
   </ul> 
-<div class="main wp">
-    <div class="contact cl">
-      <div class="contact-info">
-        <h3>Contact information</h3>
-        <p class="p1"><?php echo $site['name']; ?></p>
-  <?php $__jrHpFlRxsL__ = \addons\cms\model\Block::getBlockList(["id"=>"block","name"=>"contact","orderby"=>"id","orderway"=>"desc"]); if(is_array($__jrHpFlRxsL__) || $__jrHpFlRxsL__ instanceof \think\Collection || $__jrHpFlRxsL__ instanceof \think\Paginator): $i = 0; $__LIST__ = $__jrHpFlRxsL__;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$block): $mod = ($i % 2 );++$i;if($block['title'] == 'tel'): ?>
-      <p class="p2"><a href="tel:<?php echo str_replace(['<p>','</p>'], '', $block['content']); ?>" rel="nofollow"><?php echo str_replace(["<p>","</p>"], "", $block['content']); ?></a></p>
-    <?php endif; endforeach; endif; else: echo "" ;endif; $__LASTLIST__=$__jrHpFlRxsL__; $__bpRH6vqXSF__ = \addons\cms\model\Block::getBlockList(["id"=>"block","name"=>"contact","orderby"=>"id","orderway"=>"desc"]); if(is_array($__bpRH6vqXSF__) || $__bpRH6vqXSF__ instanceof \think\Collection || $__bpRH6vqXSF__ instanceof \think\Paginator): $i = 0; $__LIST__ = $__bpRH6vqXSF__;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$block): $mod = ($i % 2 );++$i;if($block['title'] == 'Fax'): ?>
-    <p class="p3">Fax: <?php echo $block['title']; ?>:<?php echo str_replace(["<p>","</p>"], "", $block['content']); ?></p>
-    <?php endif; endforeach; endif; else: echo "" ;endif; $__LASTLIST__=$__bpRH6vqXSF__; $__2PhnazS6r7__ = \addons\cms\model\Block::getBlockList(["id"=>"block","name"=>"contact","orderby"=>"id","orderway"=>"desc"]); if(is_array($__2PhnazS6r7__) || $__2PhnazS6r7__ instanceof \think\Collection || $__2PhnazS6r7__ instanceof \think\Paginator): $i = 0; $__LIST__ = $__2PhnazS6r7__;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$block): $mod = ($i % 2 );++$i;if($block['title'] == 'Add'): ?>
-    <p class="p4">Add: <?php echo $block['title']; ?>:<?php echo str_replace(["<p>","</p>"], "", $block['content']); ?></p>
-    <?php endif; endforeach; endif; else: echo "" ;endif; $__LASTLIST__=$__2PhnazS6r7__; $__UiwPDNTHZ7__ = \addons\cms\model\Block::getBlockList(["id"=>"block","name"=>"contact","orderby"=>"id","orderway"=>"desc"]); if(is_array($__UiwPDNTHZ7__) || $__UiwPDNTHZ7__ instanceof \think\Collection || $__UiwPDNTHZ7__ instanceof \think\Paginator): $i = 0; $__LIST__ = $__UiwPDNTHZ7__;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$block): $mod = ($i % 2 );++$i;if($block['title'] == 'Email'): ?>
-    <p class="p5"><a href="mailto:<?php echo str_replace(['<p>','</p>'], '', $block['content']); ?>" rel="nofollow"><?php echo str_replace(["<p>","</p>"], "", $block['content']); ?></a></p>
-    <?php endif; endforeach; endif; else: echo "" ;endif; $__LASTLIST__=$__UiwPDNTHZ7__; ?>
-      </div>
-      <div class="contact-inquiry">
-  <!--aifeedback v2 start -->
-  <div class="crm-form">
-    <div class="create-form-wrap">
-      <div class="create-form-title" style="background:#0F74A5;">Contact Us</div>
-      <div class="create-form-inner">
-        <div class="create-form-ul">
-          <form class="contact-from" onsubmit="return $('.formPoint').show();" method="POST" action="/d/customer/post.html">
-            <input type="hidden" name="__diyname__" value="customer">
-            <?php echo token(); ?>
-                <div class="create-form-li">
-              <div class="create-form-input">
-                <label>Name<span style="color:#F00">*</span>:</label>
-                <input type="text" name="row[name]">
-              </div>
-            </div>
-  <div class="create-form-li">
-              <div class="create-form-input">
-                <label>Country:</label>
-                <input type="text" name="row[country]">
-              </div>
-            </div>
-  <div class="create-form-li">
-              <div class="create-form-input">
-                <label>Company:</label>
-                <input type="text" name="row[company]">
-              </div>
-            </div>
-  <div class="create-form-li">
-              <div class="create-form-input">
-                <label>Email<span style="color:#F00">*</span>:</label>
-                <input type="text" name="row[email]">
-              </div>
-            </div>
-  <div class="create-form-li">
-              <div class="create-form-input">
-                <label>Tel:</label>
-                <input type="text" name="row[telephone]">
-              </div>
-            </div>
-  <div class="create-form-block create-form-li create-form-message">
-              <div class="create-form-textarea">
-                <label>Message<span style="color:#F00">*</span>:</label>
-                <textarea name="row[content]"></textarea>
-              </div>
+<!--aifeedback v2 start -->
+<div class="crm-form">
+  <div class="create-form-wrap">
+    <div class="create-form-title" style="background:#0F74A5;">Contact Us</div>
+    <div class="create-form-inner">
+      <div class="create-form-ul">
+        <form class="contact-from" onsubmit="return $('.formPoint').show();" method="POST" action="/d/customer/post.html">
+          <input type="hidden" name="__diyname__" value="customer">
+          <?php echo token(); ?>
+              <div class="create-form-li">
+            <div class="create-form-input">
+              <label>Name<span style="color:#F00">*</span>:</label>
+              <input type="text" name="row[name]">
             </div>
           </div>
-          <div class="create-form-block create-form-cen create-form-action">
-            <input type="hidden" class="cid" name="cid" value="381">
-            <button type="submit" class="create-form-submit" style="background:#0F74A5;">Submit</button>
+<div class="create-form-li">
+            <div class="create-form-input">
+              <label>Country:</label>
+              <input type="text" name="row[country]">
+            </div>
           </div>
-          </form>
+<div class="create-form-li">
+            <div class="create-form-input">
+              <label>Company:</label>
+              <input type="text" name="row[company]">
+            </div>
+          </div>
+<div class="create-form-li">
+            <div class="create-form-input">
+              <label>Email<span style="color:#F00">*</span>:</label>
+              <input type="text" name="row[email]">
+            </div>
+          </div>
+<div class="create-form-li">
+            <div class="create-form-input">
+              <label>Tel:</label>
+              <input type="text" name="row[telephone]">
+            </div>
+          </div>
+<div class="create-form-block create-form-li create-form-message">
+            <div class="create-form-textarea">
+              <label>Message<span style="color:#F00">*</span>:</label>
+              <textarea name="row[content]"></textarea>
+            </div>
+          </div>
         </div>
+        <div class="create-form-block create-form-cen create-form-action">
+          <input type="hidden" class="cid" name="cid" value="381">
+          <button type="submit" class="create-form-submit" style="background:#0F74A5;">Submit</button>
+        </div>
+        </form>
       </div>
     </div>
   </div>
-  <!--aifeedback v2 end -->
-  <!-- <script type="text/javascript" src="/group/js/form.js"></script> -->
-      </div>
-    </div>
 <footer class="web_footer"> 
     <ul class="foot_nav wow fadeInUpA" data-wow-delay="1s" data-wow-duration=".8s"> 
-     <?php $__d6IBH87Dz5__ = \addons\cms\model\Channel::getChannelList(["id"=>"nav","type"=>"top","cache"=>"0","condition"=>"1=isnav","row"=>"20","orderby"=>"weigh","orderway"=>"desc"]); if(is_array($__d6IBH87Dz5__) || $__d6IBH87Dz5__ instanceof \think\Collection || $__d6IBH87Dz5__ instanceof \think\Paginator): $i = 0; $__LIST__ = $__d6IBH87Dz5__;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$nav): $mod = ($i % 2 );++$i;?>
+     <?php $__Iw3zcRgh7y__ = \addons\cms\model\Channel::getChannelList(["id"=>"nav","type"=>"top","cache"=>"0","condition"=>"1=isnav","row"=>"20","orderby"=>"weigh","orderway"=>"desc"]); if(is_array($__Iw3zcRgh7y__) || $__Iw3zcRgh7y__ instanceof \think\Collection || $__Iw3zcRgh7y__ instanceof \think\Paginator): $i = 0; $__LIST__ = $__Iw3zcRgh7y__;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$nav): $mod = ($i % 2 );++$i;?>
         <li><a href="<?php echo $nav['url']; ?>"><?php echo $nav['name']; ?></a> </li>
-     <?php endforeach; endif; else: echo "" ;endif; $__LASTLIST__=$__d6IBH87Dz5__; ?>
+     <?php endforeach; endif; else: echo "" ;endif; $__LASTLIST__=$__Iw3zcRgh7y__; ?>
     </ul> 
     <div class="foot_bottom layout"> 
      <ul class="foot_contact wow fadeInUpA" data-wow-delay="1.3s" data-wow-duration=".8s"> 
@@ -218,9 +199,9 @@
       <li class="foot_phone"><a href="tel:{site.tell}">Tel:<?php echo $site['tell']; ?></a></li> 
      </ul> 
      <ul class="foot_sns wow fadeInUpA" data-wow-delay="1.5s" data-wow-duration=".8s"> 
-        <?php $__iVwC6tZy18__ = \addons\cms\model\Block::getBlockList(["id"=>"block","name"=>"media","orderby"=>"weigh","orderway"=>"asc"]); if(is_array($__iVwC6tZy18__) || $__iVwC6tZy18__ instanceof \think\Collection || $__iVwC6tZy18__ instanceof \think\Paginator): $i = 0; $__LIST__ = $__iVwC6tZy18__;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$block): $mod = ($i % 2 );++$i;?>
+        <?php $__u94y2bSl5I__ = \addons\cms\model\Block::getBlockList(["id"=>"block","name"=>"media","orderby"=>"weigh","orderway"=>"asc"]); if(is_array($__u94y2bSl5I__) || $__u94y2bSl5I__ instanceof \think\Collection || $__u94y2bSl5I__ instanceof \think\Paginator): $i = 0; $__LIST__ = $__u94y2bSl5I__;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$block): $mod = ($i % 2 );++$i;?>
             <li><a href="<?php echo $block['url']; ?>"><img src="<?php echo $block['image']; ?>" alt="<?php echo $block['title']; ?>"></a></li> 
-        <?php endforeach; endif; else: echo "" ;endif; $__LASTLIST__=$__iVwC6tZy18__; ?>
+        <?php endforeach; endif; else: echo "" ;endif; $__LASTLIST__=$__u94y2bSl5I__; ?>
      </ul> 
      <div class="copyright wow fadeInUpA" data-wow-delay="1.7s" data-wow-duration=".8s">
       <!-- Copyright © 2019 
@@ -244,9 +225,9 @@
       <li><a class="inquiry" href="">Send Inquiry</a>  -->
      </div> 
      <div class="t-code">
-    <?php $__2uQm8L5ltC__ = \addons\cms\model\Block::getBlockList(["id"=>"block","name"=>"online-service","orderby"=>"weigh","orderway"=>"asc"]); if(is_array($__2uQm8L5ltC__) || $__2uQm8L5ltC__ instanceof \think\Collection || $__2uQm8L5ltC__ instanceof \think\Paginator): $i = 0; $__LIST__ = $__2uQm8L5ltC__;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$block): $mod = ($i % 2 );++$i;?>
+    <?php $__jHNc7FGnMU__ = \addons\cms\model\Block::getBlockList(["id"=>"block","name"=>"online-service","orderby"=>"weigh","orderway"=>"asc"]); if(is_array($__jHNc7FGnMU__) || $__jHNc7FGnMU__ instanceof \think\Collection || $__jHNc7FGnMU__ instanceof \think\Paginator): $i = 0; $__LIST__ = $__jHNc7FGnMU__;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$block): $mod = ($i % 2 );++$i;?>
       <img src="<?php echo $block['image']; ?>">
-    <?php endforeach; endif; else: echo "" ;endif; $__LASTLIST__=$__2uQm8L5ltC__; ?>
+    <?php endforeach; endif; else: echo "" ;endif; $__LASTLIST__=$__jHNc7FGnMU__; ?>
       
      </div> 
      <div class="side_title">

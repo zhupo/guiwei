@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:97:"/Users/pan.liu/Documents/privateProject/guiwei/guiwei1/addons/cms/view/default1/show_product.html";i:1688720911;s:95:"/Users/pan.liu/Documents/privateProject/guiwei/guiwei1/addons/cms/view/default1/common/top.html";i:1688612883;s:95:"/Users/pan.liu/Documents/privateProject/guiwei/guiwei1/addons/cms/view/default1/common/mbx.html";i:1688701138;s:96:"/Users/pan.liu/Documents/privateProject/guiwei/guiwei1/addons/cms/view/default1/common/left.html";i:1688712927;s:96:"/Users/pan.liu/Documents/privateProject/guiwei/guiwei1/addons/cms/view/default1/common/foot.html";i:1688698032;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:97:"/Users/pan.liu/Documents/privateProject/guiwei/guiwei1/addons/cms/view/default1/show_product.html";i:1688973710;s:95:"/Users/pan.liu/Documents/privateProject/guiwei/guiwei1/addons/cms/view/default1/common/top.html";i:1688953387;s:95:"/Users/pan.liu/Documents/privateProject/guiwei/guiwei1/addons/cms/view/default1/common/mbx.html";i:1688701138;s:96:"/Users/pan.liu/Documents/privateProject/guiwei/guiwei1/addons/cms/view/default1/common/left.html";i:1688712927;s:96:"/Users/pan.liu/Documents/privateProject/guiwei/guiwei1/addons/cms/view/default1/common/foot.html";i:1688698032;}*/ ?>
 <!doctype html>
 <html>
  <head> 
@@ -18,10 +18,12 @@
        <a href="">Phone:<?php echo $site['tell']; ?></a>
       </div> 
       <div class="head-search"> 
-       <form class="" action=""> 
-        <input class="search-btn" type="button"> 
-        <input class="search-ipt" name="search" placeholder="Search..."> 
+       <form class="" action="/Products.html" method="GET"> 
+        <button class="search-btn"></button>
+        <!-- <input class="search-btn" type="button" />  -->
+        <input class="search-ipt" type="text" name="title" <?php if(!empty($v)): ?>value="<?php echo $v; ?>"<?php endif; ?> placeholder="Search..." /> 
        </form> 
+
       </div> 
      </div> 
     </section> 
@@ -32,26 +34,26 @@
      </figure> 
      <nav class="nav_wrap"> 
       <ul class="head_nav"> 
-       <?php $__ZRI2tA4ijJ__ = \addons\cms\model\Channel::getChannelList(["id"=>"nav","type"=>"top","cache"=>"0","condition"=>"1=isnav","row"=>"20","orderby"=>"weigh","orderway"=>"desc"]); if(is_array($__ZRI2tA4ijJ__) || $__ZRI2tA4ijJ__ instanceof \think\Collection || $__ZRI2tA4ijJ__ instanceof \think\Paginator): $i = 0; $__LIST__ = $__ZRI2tA4ijJ__;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$nav): $mod = ($i % 2 );++$i;?>
+       <?php $__zg2hpH0IZo__ = \addons\cms\model\Channel::getChannelList(["id"=>"nav","type"=>"top","cache"=>"0","condition"=>"1=isnav","row"=>"20","orderby"=>"weigh","orderway"=>"desc"]); if(is_array($__zg2hpH0IZo__) || $__zg2hpH0IZo__ instanceof \think\Collection || $__zg2hpH0IZo__ instanceof \think\Paginator): $i = 0; $__LIST__ = $__zg2hpH0IZo__;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$nav): $mod = ($i % 2 );++$i;?>
         <li>
             <a href="<?php echo $nav['url']; ?>"><?php echo $nav['name']; ?></a>
             <?php if($nav['has_child']): ?>
                 <ul>
-                    <?php $__vBQSuAIgnK__ = \addons\cms\model\Channel::getChannelList(["id"=>"son","type"=>"son","condition"=>"1=isnav","typeid"=>$nav['id'],"cache"=>"0","row"=>"20"]); if(is_array($__vBQSuAIgnK__) || $__vBQSuAIgnK__ instanceof \think\Collection || $__vBQSuAIgnK__ instanceof \think\Paginator): $i = 0; $__LIST__ = $__vBQSuAIgnK__;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$son): $mod = ($i % 2 );++$i;?>
+                    <?php $__lnKbCxJd1X__ = \addons\cms\model\Channel::getChannelList(["id"=>"son","type"=>"son","condition"=>"1=isnav","typeid"=>$nav['id'],"cache"=>"0","row"=>"20"]); if(is_array($__lnKbCxJd1X__) || $__lnKbCxJd1X__ instanceof \think\Collection || $__lnKbCxJd1X__ instanceof \think\Paginator): $i = 0; $__LIST__ = $__lnKbCxJd1X__;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$son): $mod = ($i % 2 );++$i;?>
                         <li><a href="<?php echo $son['url']; ?>"><?php echo $son['name']; ?></a>
                         <?php if($son['has_child']): ?>
                             <ul>
-                            <?php $__xaiULVzk5W__ = \addons\cms\model\Channel::getChannelList(["id"=>"sons","condition"=>"1=isnav","type"=>"son","typeid"=>$son['id'],"cache"=>"0"]); if(is_array($__xaiULVzk5W__) || $__xaiULVzk5W__ instanceof \think\Collection || $__xaiULVzk5W__ instanceof \think\Paginator): $i = 0; $__LIST__ = $__xaiULVzk5W__;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$sons): $mod = ($i % 2 );++$i;?>
+                            <?php $__D4M7dsRkjh__ = \addons\cms\model\Channel::getChannelList(["id"=>"sons","condition"=>"1=isnav","type"=>"son","typeid"=>$son['id'],"cache"=>"0"]); if(is_array($__D4M7dsRkjh__) || $__D4M7dsRkjh__ instanceof \think\Collection || $__D4M7dsRkjh__ instanceof \think\Paginator): $i = 0; $__LIST__ = $__D4M7dsRkjh__;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$sons): $mod = ($i % 2 );++$i;?>
                                 <li><a href="<?php echo $sons['url']; ?>"><?php echo $sons['name']; ?></a></li>
-                            <?php endforeach; endif; else: echo "" ;endif; $__LASTLIST__=$__xaiULVzk5W__; ?>
+                            <?php endforeach; endif; else: echo "" ;endif; $__LASTLIST__=$__D4M7dsRkjh__; ?>
                             </ul> 
                         <?php endif; ?>
                         </li>
-                    <?php endforeach; endif; else: echo "" ;endif; $__LASTLIST__=$__vBQSuAIgnK__; ?>
+                    <?php endforeach; endif; else: echo "" ;endif; $__LASTLIST__=$__lnKbCxJd1X__; ?>
                 </ul>
             <?php endif; ?>
         </li>
-        <?php endforeach; endif; else: echo "" ;endif; $__LASTLIST__=$__ZRI2tA4ijJ__; ?>
+        <?php endforeach; endif; else: echo "" ;endif; $__LASTLIST__=$__zg2hpH0IZo__; ?>
       </ul> 
       <!--change-language--> 
       <div class="change-language ensemble"> 
@@ -139,9 +141,9 @@
    <section class="path_bar"> 
     <ul> 
      <!-- <li>Products</li>  -->
-     <?php $__3BgwWuRTF2__ = \addons\cms\model\Channel::getBreadcrumb($__CHANNEL__??[], $__ARCHIVES__??[], $__TAGS__??[], $__PAGE__??[], $__DIYFORM__??[]); if(is_array($__3BgwWuRTF2__) || $__3BgwWuRTF2__ instanceof \think\Collection || $__3BgwWuRTF2__ instanceof \think\Paginator): $k = 0; $__LIST__ = $__3BgwWuRTF2__;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$item): $mod = ($k % 2 );++$k;?>
+     <?php $__Rgn6OcSGTt__ = \addons\cms\model\Channel::getBreadcrumb($__CHANNEL__??[], $__ARCHIVES__??[], $__TAGS__??[], $__PAGE__??[], $__DIYFORM__??[]); if(is_array($__Rgn6OcSGTt__) || $__Rgn6OcSGTt__ instanceof \think\Collection || $__Rgn6OcSGTt__ instanceof \think\Paginator): $k = 0; $__LIST__ = $__Rgn6OcSGTt__;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$item): $mod = ($k % 2 );++$k;?>
      <li class="nav_current"><a title="<?php echo $item['name']; ?>" href="<?php echo $item['url']; ?>"><?php echo $item['name']; ?></a></li> 
-     <?php endforeach; endif; else: echo "" ;endif; $__LASTLIST__=$__3BgwWuRTF2__; ?>
+     <?php endforeach; endif; else: echo "" ;endif; $__LASTLIST__=$__Rgn6OcSGTt__; ?>
     </ul> 
    </section>  
    <!-- page-layout start --> 
@@ -155,17 +157,17 @@
        <h2 class="side-tit">Product Categories</h2> 
       </div> 
       <ul class="side-cate"> 
-        <?php $__ulW5NE1Aq8__ = \addons\cms\model\Channel::getChannelList(["id"=>"channel","type"=>"son","typeid"=>"44","row"=>"100"]); if(is_array($__ulW5NE1Aq8__) || $__ulW5NE1Aq8__ instanceof \think\Collection || $__ulW5NE1Aq8__ instanceof \think\Paginator): $i = 0; $__LIST__ = $__ulW5NE1Aq8__;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$channel): $mod = ($i % 2 );++$i;?>
+        <?php $__Nn2qpKRVTD__ = \addons\cms\model\Channel::getChannelList(["id"=>"channel","type"=>"son","typeid"=>"44","row"=>"100"]); if(is_array($__Nn2qpKRVTD__) || $__Nn2qpKRVTD__ instanceof \think\Collection || $__Nn2qpKRVTD__ instanceof \think\Paginator): $i = 0; $__LIST__ = $__Nn2qpKRVTD__;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$channel): $mod = ($i % 2 );++$i;?>
             <li class="<?php if($channel['is_active']): ?>nav-current<?php endif; ?>"><a href="<?php echo $channel['url']; ?>"><?php echo $channel['name']; ?></a> 
                 <?php if($channel['has_child']): ?>
                 <ul class="sub-menu"> 
-                    <?php $__gdseLm5x9G__ = \addons\cms\model\Channel::getChannelList(["id"=>"sonChannel","type"=>"son","typeid"=>$channel['id'],"row"=>"100"]); if(is_array($__gdseLm5x9G__) || $__gdseLm5x9G__ instanceof \think\Collection || $__gdseLm5x9G__ instanceof \think\Paginator): $i = 0; $__LIST__ = $__gdseLm5x9G__;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$sonChannel): $mod = ($i % 2 );++$i;?>
+                    <?php $__B8QWasGnxq__ = \addons\cms\model\Channel::getChannelList(["id"=>"sonChannel","type"=>"son","typeid"=>$channel['id'],"row"=>"100"]); if(is_array($__B8QWasGnxq__) || $__B8QWasGnxq__ instanceof \think\Collection || $__B8QWasGnxq__ instanceof \think\Paginator): $i = 0; $__LIST__ = $__B8QWasGnxq__;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$sonChannel): $mod = ($i % 2 );++$i;?>
                         <li class="<?php if($sonChannel['is_active']): ?>nav-current<?php endif; ?>"><a href="<?php echo $sonChannel['url']; ?>"><?php echo $sonChannel['name']; ?></a></li> 
-                    <?php endforeach; endif; else: echo "" ;endif; $__LASTLIST__=$__gdseLm5x9G__; ?>
+                    <?php endforeach; endif; else: echo "" ;endif; $__LASTLIST__=$__B8QWasGnxq__; ?>
                 </ul> 
                 <?php endif; ?>
             </li> 
-       <?php endforeach; endif; else: echo "" ;endif; $__LASTLIST__=$__ulW5NE1Aq8__; ?>
+       <?php endforeach; endif; else: echo "" ;endif; $__LASTLIST__=$__Nn2qpKRVTD__; ?>
       </ul> 
      </div> 
      <div class="side-widget"> 
@@ -176,7 +178,7 @@
        <div class="items_content"> 
         <div class="side_slider"> 
          <ul class="swiper-wrapper"> 
-            <?php $__qotILUx49k__ = \addons\cms\model\Channel::getChannelList(["id"=>"channel","type"=>"son","typeid"=>"44","orderby"=>"weigh","orderway"=>"asc"]); if(is_array($__qotILUx49k__) || $__qotILUx49k__ instanceof \think\Collection || $__qotILUx49k__ instanceof \think\Paginator): $i = 0; $__LIST__ = $__qotILUx49k__;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$channel): $mod = ($i % 2 );++$i;$__JyxnrCK1FS__ = \addons\cms\model\Archives::getArchivesList(["id"=>"prod","channel"=>$channel['id'],"orderby"=>"weigh","orderway"=>"desc","row"=>"20"]); if(is_array($__JyxnrCK1FS__) || $__JyxnrCK1FS__ instanceof \think\Collection || $__JyxnrCK1FS__ instanceof \think\Paginator): $i = 0; $__LIST__ = $__JyxnrCK1FS__;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$prod): $mod = ($i % 2 );++$i;?>
+            <?php $__EAXDQ03ZxV__ = \addons\cms\model\Channel::getChannelList(["id"=>"channel","type"=>"son","typeid"=>"44","orderby"=>"weigh","orderway"=>"asc"]); if(is_array($__EAXDQ03ZxV__) || $__EAXDQ03ZxV__ instanceof \think\Collection || $__EAXDQ03ZxV__ instanceof \think\Paginator): $i = 0; $__LIST__ = $__EAXDQ03ZxV__;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$channel): $mod = ($i % 2 );++$i;$__v1uMytJ3b7__ = \addons\cms\model\Archives::getArchivesList(["id"=>"prod","channel"=>$channel['id'],"orderby"=>"weigh","orderway"=>"desc","row"=>"20"]); if(is_array($__v1uMytJ3b7__) || $__v1uMytJ3b7__ instanceof \think\Collection || $__v1uMytJ3b7__ instanceof \think\Paginator): $i = 0; $__LIST__ = $__v1uMytJ3b7__;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$prod): $mod = ($i % 2 );++$i;?>
                 <li class="swiper-slide gm-sep side_product_item"> 
                     <figure> 
                      <a href="<?php echo $prod['url']; ?>" class="item-img"><img src="<?php echo $prod['image']; ?>" alt=""></a> 
@@ -185,7 +187,7 @@
                      </figcaption> 
                     </figure> 
                 </li>
-            <?php endforeach; endif; else: echo "" ;endif; $__LASTLIST__=$__JyxnrCK1FS__; endforeach; endif; else: echo "" ;endif; $__LASTLIST__=$__qotILUx49k__; ?>
+            <?php endforeach; endif; else: echo "" ;endif; $__LASTLIST__=$__v1uMytJ3b7__; endforeach; endif; else: echo "" ;endif; $__LASTLIST__=$__EAXDQ03ZxV__; ?>
          </ul> 
         </div> 
         <div class="btn-prev"></div> 
@@ -201,17 +203,14 @@
       <div class="product-intro"> 
        <div class="product-view"> 
         <div class="product-image"> 
-         <a class="cloud-zoom" id="zoom1" data-zoom="adjustX:0, adjustY:0" href="template/img/demo/top_pd01.jpg" title=""> <img src="images/top_pd01.jpg" itemprop="image" title="" alt="" style="width:100%"></a> 
+         <a class="cloud-zoom" id="zoom1" data-zoom="adjustX:0, adjustY:0" href="<?php echo $__ARCHIVES__['image']; ?>" title=""> <img src="<?php echo $__ARCHIVES__['image']; ?>" itemprop="image" title="" alt="" style="width:100%"></a> 
         </div> 
         <div class="image-additional-wrap"> 
          <div class="image-additional"> 
           <ul class="swiper-wrapper"> 
-           <li class="swiper-slide image-item current"> <a class="cloud-zoom-gallery item" href="template/img/demo/top_pd01.jpg" data-zoom="useZoom:zoom1, smallImage:template/img/demo/top_pd01.jpg" title=""><img src="images/top_pd01.jpg" title="" alt=""></a> </li> 
-           <li class="swiper-slide image-item"> <a class="cloud-zoom-gallery item" href="template/img/demo/top_pd02.jpg" data-zoom="useZoom:zoom1, smallImage:template/img/demo/top_pd02.jpg" title=""><img src="images/top_pd02.jpg" title="" alt=""></a> </li> 
-           <li class="swiper-slide image-item"> <a class="cloud-zoom-gallery item" href="template/img/demo/top_pd03.jpg" data-zoom="useZoom:zoom1, smallImage:template/img/demo/top_pd03.jpg" title=""><img src="images/top_pd03.jpg" title="" alt=""></a> </li> 
-           <li class="swiper-slide image-item"> <a class="cloud-zoom-gallery item" href="template/img/demo/top_pd01.jpg" data-zoom="useZoom:zoom1, smallImage:template/img/demo/top_pd01.jpg" title=""><img src="images/top_pd01.jpg" title="" alt=""></a> </li> 
-           <li class="swiper-slide image-item"> <a class="cloud-zoom-gallery item" href="template/img/demo/top_pd02.jpg" data-zoom="useZoom:zoom1, smallImage:template/img/demo/top_pd02.jpg" title=""><img src="images/top_pd02.jpg" title="" alt=""></a> </li> 
-           <li class="swiper-slide image-item"> <a class="cloud-zoom-gallery item" href="template/img/demo/top_pd03.jpg" data-zoom="useZoom:zoom1, smallImage:template/img/demo/top_pd03.jpg" title=""><img src="images/top_pd03.jpg" title="" alt=""></a> </li> 
+           <?php if(is_array(explode(',',$__ARCHIVES__['images'])) || explode(',',$__ARCHIVES__['images']) instanceof \think\Collection || explode(',',$__ARCHIVES__['images']) instanceof \think\Paginator): $i = 0; $__LIST__ = explode(',',$__ARCHIVES__['images']);if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$image): $mod = ($i % 2 );++$i;?>
+          <li class="swiper-slide image-item current"> <a class="cloud-zoom-gallery item" href="<?php echo cdnurl($image); ?>" data-zoom="useZoom:zoom1, smallImage:<?php echo cdnurl($image); ?>" title=""><img src="<?php echo cdnurl($image); ?>" title="" alt=""></a> </li> 
+        <?php endforeach; endif; else: echo "" ;endif; ?>
           </ul> 
           <div class="swiper-pagination swiper-pagination-white"></div> 
          </div> 
@@ -220,22 +219,22 @@
         </div> 
        </div> 
        <div class="product-summary"> 
-        <h2 class="page_title">Lorem ipsum dolor</h2> 
+        <h2 class="page_title"><?php echo $__ARCHIVES__['title']; ?></h2> 
         <div class="product-meta"> 
-         <p>The LifeSource UT-302 ear thermometer is a lightweight portable medical thermometer that is made to take fast, accurate temperture measurments through the ear in just one second. The UT-302 thermometer scans the ear 512 times in just one second. Reads in fahrenheit and celsius. 10 memory recall. One button activation. Led Illuminated digital screen.</p> 
+         <?php echo $__ARCHIVES__['content']; ?>
          <br> 
          <ul> 
-          <li><em>Specification: </em> <span class="item-val">20kg</span></li> 
-          <li><em>Use Parts:</em> <span class="item-val">Interior wall</span></li> 
-          <li><em>Layer: </em> <span class="item-val">Finish</span></li> 
-          <li><em>Gloss: </em> <span class="item-val">Matt</span></li> 
-          <li><em>Can mix colors:</em> <span class="item-val">No</span></li> 
-          <li><em>Construction Method:</em> <span class="item-val">Brushing, roll coating</span></li> 
+          <li><em>Active Ingredient: </em> <span class="item-val"><?php echo $__ARCHIVES__['activeIngredient']; ?></span></li> 
+          <li><em>Model NO:</em> <span class="item-val"><?php echo $__ARCHIVES__['itemNo']; ?></span></li> 
+          <li><em>Shelf Life: </em> <span class="item-val"><?php echo $__ARCHIVES__['shelfLife']; ?></span></li> 
+          <li><em>Raw Material: </em> <span class="item-val"><?php echo $__ARCHIVES__['rawMaterial']; ?></span></li> 
+          <li><em>Customs Code:</em> <span class="item-val"><?php echo $__ARCHIVES__['customsCode']; ?></span></li> 
+          <li><em>Origin:</em> <span class="item-val"><?php echo $__ARCHIVES__['placeofOrigin']; ?></span></li> 
          </ul> 
         </div> 
         <div class="gm-sep product-btn-wrap"> 
-         <a href="javascript:" class="email">CONTACT NOW</a> 
-         <a href="#" class="pdf">down load to pdf</a> 
+         <a href="/Contact-us.html" class="email">CONTACT NOW</a> 
+         <a href="/Products.html" class="pdf">More Products</a> 
         </div> 
        </div> 
       </div> 
@@ -243,7 +242,7 @@
       <div class="tab-content-wrap product-detail"> 
        <div class="gm-sep tab-title-bar detail-tabs"> 
         <h2 class="tab-title title current"><span>Details</span></h2> 
-        <h2 class="tab-title title"><span>Tags</span></h2> 
+        <!-- <h2 class="tab-title title"><span>Tags</span></h2>  -->
        </div> 
        <div class="tab-panel-wrap"> 
         <div class="tab-panel disabled"> 
@@ -255,102 +254,64 @@
               <th colspan="2"><strong>Specification</strong></th> 
              </tr> 
              <tr> 
-              <th>Faucet Type</th> 
-              <td>Bathroom Sink Faucets,</td> 
+              <th>Model NO</th> 
+              <td><?php echo $__ARCHIVES__['itemNo']; ?></td> 
              </tr> 
              <tr> 
-              <th>Installation Type</th> 
-              <td>Centerset,</td> 
+              <th>Shelf Life</th> 
+              <td><?php echo $__ARCHIVES__['shelfLife']; ?></td> 
              </tr> 
              <tr> 
-              <th>Installation Holes</th> 
-              <td>One Hole,</td> 
+              <th>Raw Material</th> 
+              <td><?php echo $__ARCHIVES__['rawMaterial']; ?></td> 
              </tr> 
              <tr> 
-              <th>Number of Handles</th> 
-              <td>Single Handle,</td> 
+              <th>Customs Code</th> 
+              <td><?php echo $__ARCHIVES__['customsCode']; ?></td> 
              </tr> 
              <tr> 
-              <th>Finish</th> 
-              <td>Ti-PVD,</td> 
+              <th>Shipping Time</th> 
+              <td><?php echo $__ARCHIVES__['shippingTime']; ?></td> 
              </tr> 
              <tr> 
-              <th>Style</th> 
-              <td>Country,</td> 
+              <th>Formula</th> 
+              <td><?php echo $__ARCHIVES__['formula']; ?></td> 
              </tr> 
              <tr> 
-              <th>Flow Rate</th> 
-              <td>1.5 GPM (5.7 L/min) max,</td> 
+              <th>SGS</th> 
+              <td><?php echo $__ARCHIVES__['sgs']; ?></td> 
              </tr> 
              <tr> 
-              <th>Valve Type</th> 
-              <td>Ceramic Valve,</td> 
-             </tr> 
-             <tr> 
-              <th>Cold and Hot Switch</th> 
-              <td>Yes,</td> 
+              <th>CAS</th> 
+              <td><?php echo $__ARCHIVES__['cas']; ?></td> 
              </tr> 
              <tr> 
               <th colspan="2"><strong>Dimensions</strong></th> 
              </tr> 
              <tr> 
-              <th>Overall Height</th> 
-              <td>240 mm ( 9.5 " ),</td> 
+              <th>Specification</th> 
+              <td><?php echo $__ARCHIVES__['specification']; ?></td> 
              </tr> 
              <tr> 
-              <th>Spout Height</th> 
-              <td>155 mm ( 6.1 " ),</td> 
+              <th>Production Capacity</th> 
+              <td><?php echo $__ARCHIVES__['productionCapacity']; ?></td> 
              </tr> 
              <tr> 
-              <th>Spout Length</th> 
-              <td>160 mm ( 6.3 " ),</td> 
+              <th>Transport Package</th> 
+              <td><?php echo $__ARCHIVES__['transportPackage']; ?></td> 
              </tr> 
              <tr> 
-              <th>Faucet center</th> 
-              <td>Single Hole,</td> 
+              <th>MOB</th> 
+              <td><?php echo $__ARCHIVES__['mbq']; ?></td> 
              </tr> 
              <tr> 
-              <th colspan="2"><strong>Material</strong></th> 
-             </tr> 
-             <tr> 
-              <th>Faucet Body Material</th> 
-              <td>Brass,</td> 
-             </tr> 
-             <tr> 
-              <th>Faucet Spout Material</th> 
-              <td>Brass,</td> 
-             </tr> 
-             <tr> 
-              <th>Faucet Handle Material</th> 
-              <td>Brass,</td> 
-             </tr> 
-             <tr> 
-              <th colspan="2"><strong>Accessories Information</strong></th> 
-             </tr> 
-             <tr> 
-              <th>Valve included</th> 
-              <td>Yes,</td> 
-             </tr> 
-             <tr> 
-              <th>Drain included</th> 
-              <td>No,</td> 
-             </tr> 
-             <tr> 
-              <th colspan="2"><strong>Weights</strong></th> 
-             </tr> 
-             <tr> 
-              <th>Net Weight (kg)</th> 
-              <td>0.99,</td> 
-             </tr> 
-             <tr> 
-              <th>Shipping Weight (kg)</th> 
-              <td>1.17,</td> 
+              <th>Placeof Origin</th> 
+              <td><?php echo $__ARCHIVES__['placeofOrigin']; ?></td> 
              </tr> 
             </tbody> 
            </table> 
           </div> 
-          <p> At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.</p> 
-          <p> At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.</p> 
+          <p><?php echo $__ARCHIVES__['description']; ?></p> 
          </div> 
         </div> 
         <div class="tab-panel disabled entry"> 
@@ -361,12 +322,12 @@
        </div> 
       </div> 
       <!-- inquiry form --> 
-      <div class="inquiry-form-wrap"> 
+      <!-- <div class="inquiry-form-wrap">  -->
        <!-- <script type="text/javascript" src="https://www.globalso.site/php/app.php?widget-init-inline.js"></script>--> 
-       <div class="ad_prompt">
+       <!-- <div class="ad_prompt">
         Write your message here and send it to us
        </div> 
-      </div> 
+      </div>  -->
      </section> 
      <!--main end--> 
     </div> 
@@ -380,62 +341,15 @@
      <div class="layer-bd"> 
       <div class="swiper-slider"> 
        <ul class="swiper-wrapper"> 
-        <li class="swiper-slide wow fadeInUpA product_item" data-wow-delay=".1s"> 
-         <figure> 
-          <span class="item_img"><img src="images/pd03.jpg" alt=""><a href="product.html" class="img_shadow"></a></span> 
-          <figcaption> 
-           <h3 class="item_title"><a href="">pink leather bag</a></h3> 
-          </figcaption> 
-         </figure> </li> 
-        <li class="swiper-slide wow fadeInUpA product_item" data-wow-delay=".1s"> 
-         <figure> 
-          <span class="item_img"><img src="images/pd04.jpg" alt=""><a href="product.html" class="img_shadow"></a></span> 
-          <figcaption> 
-           <h3 class="item_title"><a href="">pink leather bag</a></h3> 
-          </figcaption> 
-         </figure> </li> 
-        <li class="swiper-slide wow fadeInUpA product_item" data-wow-delay=".1s"> 
-         <figure> 
-          <span class="item_img"><img src="images/pd03.jpg" alt=""><a href="product.html" class="img_shadow"></a></span> 
-          <figcaption> 
-           <h3 class="item_title"><a href="">pink leather bag</a></h3> 
-          </figcaption> 
-         </figure> </li> 
-        <li class="swiper-slide wow fadeInUpA product_item" data-wow-delay=".1s"> 
-         <figure> 
-          <span class="item_img"><img src="images/pd04.jpg" alt=""><a href="product.html" class="img_shadow"></a></span> 
-          <figcaption> 
-           <h3 class="item_title"><a href="">pink leather bag</a></h3> 
-          </figcaption> 
-         </figure> </li> 
-        <li class="swiper-slide wow fadeInUpA product_item" data-wow-delay=".1s"> 
-         <figure> 
-          <span class="item_img"><img src="images/pd03.jpg" alt=""><a href="product.html" class="img_shadow"></a></span> 
-          <figcaption> 
-           <h3 class="item_title"><a href="">pink leather bag</a></h3> 
-          </figcaption> 
-         </figure> </li> 
-        <li class="swiper-slide wow fadeInUpA product_item" data-wow-delay=".1s"> 
-         <figure> 
-          <span class="item_img"><img src="images/pd04.jpg" alt=""><a href="product.html" class="img_shadow"></a></span> 
-          <figcaption> 
-           <h3 class="item_title"><a href="">pink leather bag</a></h3> 
-          </figcaption> 
-         </figure> </li> 
-        <li class="swiper-slide wow fadeInUpA product_item" data-wow-delay=".1s"> 
-         <figure> 
-          <span class="item_img"><img src="images/pd03.jpg" alt=""><a href="product.html" class="img_shadow"></a></span> 
-          <figcaption> 
-           <h3 class="item_title"><a href="">pink leather bag</a></h3> 
-          </figcaption> 
-         </figure> </li> 
-        <li class="swiper-slide wow fadeInUpA product_item" data-wow-delay=".1s"> 
-         <figure> 
-          <span class="item_img"><img src="images/pd04.jpg" alt=""><a href="product.html" class="img_shadow"></a></span> 
-          <figcaption> 
-           <h3 class="item_title"><a href="">pink leather bag</a></h3> 
-          </figcaption> 
-         </figure> </li> 
+        <?php $__GOd2kC1cql__ = \addons\cms\model\Channel::getChannelList(["id"=>"channel","type"=>"son","typeid"=>"44","orderby"=>"weigh","orderway"=>"asc"]); if(is_array($__GOd2kC1cql__) || $__GOd2kC1cql__ instanceof \think\Collection || $__GOd2kC1cql__ instanceof \think\Paginator): $i = 0; $__LIST__ = $__GOd2kC1cql__;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$channel): $mod = ($i % 2 );++$i;$__uMpOtj0SPw__ = \addons\cms\model\Archives::getArchivesList(["id"=>"prod","channel"=>$channel['id'],"orderby"=>"weigh","orderway"=>"desc","row"=>"20"]); if(is_array($__uMpOtj0SPw__) || $__uMpOtj0SPw__ instanceof \think\Collection || $__uMpOtj0SPw__ instanceof \think\Paginator): $i = 0; $__LIST__ = $__uMpOtj0SPw__;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$prod): $mod = ($i % 2 );++$i;?>
+          <li class="swiper-slide wow fadeInUpA product_item" data-wow-delay=".1s"> 
+            <figure> 
+             <span class="item_img"><img src="<?php echo $prod['image']; ?>" alt=""><a href="<?php echo $prod['url']; ?>" class="img_shadow"></a></span> 
+             <figcaption> 
+              <h3 class="item_title"><a href="<?php echo $prod['url']; ?>"><?php echo $prod['title']; ?></a></h3> 
+             </figcaption> 
+            </figure> </li> 
+          <?php endforeach; endif; else: echo "" ;endif; $__LASTLIST__=$__uMpOtj0SPw__; endforeach; endif; else: echo "" ;endif; $__LASTLIST__=$__GOd2kC1cql__; ?>
        </ul> 
        <div class="product-pagination swiper-pagination-white"></div> 
       </div> 
@@ -448,9 +362,9 @@
    <!-- web_footer start --> 
    <footer class="web_footer"> 
     <ul class="foot_nav wow fadeInUpA" data-wow-delay="1s" data-wow-duration=".8s"> 
-     <?php $__jsRQUZ93mP__ = \addons\cms\model\Channel::getChannelList(["id"=>"nav","type"=>"top","cache"=>"0","condition"=>"1=isnav","row"=>"20","orderby"=>"weigh","orderway"=>"desc"]); if(is_array($__jsRQUZ93mP__) || $__jsRQUZ93mP__ instanceof \think\Collection || $__jsRQUZ93mP__ instanceof \think\Paginator): $i = 0; $__LIST__ = $__jsRQUZ93mP__;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$nav): $mod = ($i % 2 );++$i;?>
+     <?php $__3EP7t1v5Yl__ = \addons\cms\model\Channel::getChannelList(["id"=>"nav","type"=>"top","cache"=>"0","condition"=>"1=isnav","row"=>"20","orderby"=>"weigh","orderway"=>"desc"]); if(is_array($__3EP7t1v5Yl__) || $__3EP7t1v5Yl__ instanceof \think\Collection || $__3EP7t1v5Yl__ instanceof \think\Paginator): $i = 0; $__LIST__ = $__3EP7t1v5Yl__;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$nav): $mod = ($i % 2 );++$i;?>
         <li><a href="<?php echo $nav['url']; ?>"><?php echo $nav['name']; ?></a> </li>
-     <?php endforeach; endif; else: echo "" ;endif; $__LASTLIST__=$__jsRQUZ93mP__; ?>
+     <?php endforeach; endif; else: echo "" ;endif; $__LASTLIST__=$__3EP7t1v5Yl__; ?>
     </ul> 
     <div class="foot_bottom layout"> 
      <ul class="foot_contact wow fadeInUpA" data-wow-delay="1.3s" data-wow-duration=".8s"> 
@@ -459,9 +373,9 @@
       <li class="foot_phone"><a href="tel:{site.tell}">Tel:<?php echo $site['tell']; ?></a></li> 
      </ul> 
      <ul class="foot_sns wow fadeInUpA" data-wow-delay="1.5s" data-wow-duration=".8s"> 
-        <?php $__8JIc2N5LFn__ = \addons\cms\model\Block::getBlockList(["id"=>"block","name"=>"media","orderby"=>"weigh","orderway"=>"asc"]); if(is_array($__8JIc2N5LFn__) || $__8JIc2N5LFn__ instanceof \think\Collection || $__8JIc2N5LFn__ instanceof \think\Paginator): $i = 0; $__LIST__ = $__8JIc2N5LFn__;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$block): $mod = ($i % 2 );++$i;?>
+        <?php $__UBlKAS1RrZ__ = \addons\cms\model\Block::getBlockList(["id"=>"block","name"=>"media","orderby"=>"weigh","orderway"=>"asc"]); if(is_array($__UBlKAS1RrZ__) || $__UBlKAS1RrZ__ instanceof \think\Collection || $__UBlKAS1RrZ__ instanceof \think\Paginator): $i = 0; $__LIST__ = $__UBlKAS1RrZ__;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$block): $mod = ($i % 2 );++$i;?>
             <li><a href="<?php echo $block['url']; ?>"><img src="<?php echo $block['image']; ?>" alt="<?php echo $block['title']; ?>"></a></li> 
-        <?php endforeach; endif; else: echo "" ;endif; $__LASTLIST__=$__8JIc2N5LFn__; ?>
+        <?php endforeach; endif; else: echo "" ;endif; $__LASTLIST__=$__UBlKAS1RrZ__; ?>
      </ul> 
      <div class="copyright wow fadeInUpA" data-wow-delay="1.7s" data-wow-duration=".8s">
       <!-- Copyright © 2019 
@@ -485,9 +399,9 @@
       <li><a class="inquiry" href="">Send Inquiry</a>  -->
      </div> 
      <div class="t-code">
-    <?php $__gbiqNzX6Zy__ = \addons\cms\model\Block::getBlockList(["id"=>"block","name"=>"online-service","orderby"=>"weigh","orderway"=>"asc"]); if(is_array($__gbiqNzX6Zy__) || $__gbiqNzX6Zy__ instanceof \think\Collection || $__gbiqNzX6Zy__ instanceof \think\Paginator): $i = 0; $__LIST__ = $__gbiqNzX6Zy__;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$block): $mod = ($i % 2 );++$i;?>
+    <?php $__yajbv90pud__ = \addons\cms\model\Block::getBlockList(["id"=>"block","name"=>"online-service","orderby"=>"weigh","orderway"=>"asc"]); if(is_array($__yajbv90pud__) || $__yajbv90pud__ instanceof \think\Collection || $__yajbv90pud__ instanceof \think\Paginator): $i = 0; $__LIST__ = $__yajbv90pud__;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$block): $mod = ($i % 2 );++$i;?>
       <img src="<?php echo $block['image']; ?>">
-    <?php endforeach; endif; else: echo "" ;endif; $__LASTLIST__=$__gbiqNzX6Zy__; ?>
+    <?php endforeach; endif; else: echo "" ;endif; $__LASTLIST__=$__yajbv90pud__; ?>
       
      </div> 
      <div class="side_title">
