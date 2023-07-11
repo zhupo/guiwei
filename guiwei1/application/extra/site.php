@@ -60,4 +60,6 @@ return array (
   'selectservice' => 
   array (
   ),
+  'address' => 'West of Yaodu Avenue, Tuojiang Town, Jianghua Yao Autonomous County, Yongzhou City, Hunan Province, P.R,China',
+  'fax' => 'FAX: 400-000-1089',
 );
